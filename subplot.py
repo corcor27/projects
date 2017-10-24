@@ -150,12 +150,12 @@ ax7.hist(chi_p_INC_60,50, facecolor='g', normed=True)
 ax7.axvline(x=INC_60_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax7.axvline(x=INC_60_lower_90,linewidth=2,linestyle='dashed',color='k')
 ax7.axvline(x=inj_v,linewidth=2, color='r')
-ax6.set_title('Inclination 60.0 deg')
+ax7.set_title('Inclination 60.0 deg')
 
 
 fig.tight_layout()
 fig.set_figheight(15)
 fig.set_figwidth(10)
 
-plt.savefig("chi_mix_plot6.png")
+plt.savefig("chi_mix_plot7.png")
 
