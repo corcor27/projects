@@ -97,19 +97,19 @@ INC_60_lower_90=np.percentile(chi_p_INC_60, 5)
 fig = plt.figure()
 ax1 = fig.add_subplot(121)
 ax1.hist(chi_p_INC_0,50, facecolor='m', normed=True)
-ax1.xlabel('chi_p')
+
 ax1.axvline(x=INC_0_upper_90,linewidth=2,linestyle='dashed',color='m')
 ax1.axvline(x=INC_0_lower_90,linewidth=2,linestyle='dashed',color='m')
 ax1.axvline(x=inj_v,linewidth=2, color='r')
-ax1.ylabel('probability density')
+
 
 ax2 = fig.add_subplot(122)
 ax2.hist(chi_p_INC_10,50, facecolor='m', normed=True)
-ax2.xlabel('chi_p')
+
 ax2.axvline(x=INC_10_upper_90,linewidth=2,linestyle='dashed',color='m')
 ax2.axvline(x=INC_10_lower_90,linewidth=2,linestyle='dashed',color='m')
 ax2.axvline(x=inj_v,linewidth=2, color='r')
-ax2.ylabel('probability density')
+
 
 plt.savefig("chi_mix_plot.png")
 
