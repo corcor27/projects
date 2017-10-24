@@ -158,5 +158,5 @@ fig.tight_layout()
 fig.set_figheight(15)
 fig.set_figwidth(15)
 
-plt.savefig("chi_mix_plot3.png")
+plt.savefig("chi_mix_plot4.png")
 
