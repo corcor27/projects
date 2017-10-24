@@ -95,21 +95,56 @@ INC_60_upper_90=np.percentile(chi_p_INC_60, 95)
 INC_60_lower_90=np.percentile(chi_p_INC_60, 5)
 
 fig = plt.figure()
-ax1 = fig.add_subplot(121)
-ax1.hist(chi_p_INC_0,50, facecolor='m', normed=True)
+ax1 = fig.add_subplot(431)
+ax1.hist(chi_p_INC_0,50, facecolor='g', normed=True)
 
-ax1.axvline(x=INC_0_upper_90,linewidth=2,linestyle='dashed',color='m')
-ax1.axvline(x=INC_0_lower_90,linewidth=2,linestyle='dashed',color='m')
+ax1.axvline(x=INC_0_upper_90,linewidth=2,linestyle='dashed',color='k')
+ax1.axvline(x=INC_0_lower_90,linewidth=2,linestyle='dashed',color='k')
 ax1.axvline(x=inj_v,linewidth=2, color='r')
 
 
-ax2 = fig.add_subplot(122)
-ax2.hist(chi_p_INC_10,50, facecolor='m', normed=True)
+ax2 = fig.add_subplot(432)
+ax2.hist(chi_p_INC_10,50, facecolor='g', normed=True)
 
-ax2.axvline(x=INC_10_upper_90,linewidth=2,linestyle='dashed',color='m')
-ax2.axvline(x=INC_10_lower_90,linewidth=2,linestyle='dashed',color='m')
+ax2.axvline(x=INC_10_upper_90,linewidth=2,linestyle='dashed',color='k')
+ax2.axvline(x=INC_10_lower_90,linewidth=2,linestyle='dashed',color='k')
 ax2.axvline(x=inj_v,linewidth=2, color='r')
 
+ax3 = fig.add_subplot(433)
+ax3.hist(chi_p_INC_20,50, facecolor='g', normed=True)
 
-plt.savefig("chi_mix_plot.png")
+ax3.axvline(x=INC_20_upper_90,linewidth=2,linestyle='dashed',color='k')
+ax3.axvline(x=INC_20_lower_90,linewidth=2,linestyle='dashed',color='k')
+ax3.axvline(x=inj_v,linewidth=2, color='r')
+
+ax4 = fig.add_subplot(434)
+ax4.hist(chi_p_INC_30,50, facecolor='g', normed=True)
+
+ax4.axvline(x=INC_30_upper_90,linewidth=2,linestyle='dashed',color='k')
+ax4.axvline(x=INC_30_lower_90,linewidth=2,linestyle='dashed',color='k')
+ax4.axvline(x=inj_v,linewidth=2, color='r')
+
+ax5 = fig.add_subplot(435)
+ax5.hist(chi_p_INC_40,50, facecolor='g', normed=True)
+
+ax5.axvline(x=INC_40_upper_90,linewidth=2,linestyle='dashed',color='k')
+ax5.axvline(x=INC_40_lower_90,linewidth=2,linestyle='dashed',color='k')
+ax5.axvline(x=inj_v,linewidth=2, color='r')
+
+ax6 = fig.add_subplot(436)
+ax6.hist(chi_p_INC_50,50, facecolor='g', normed=True)
+
+ax6.axvline(x=INC_50_upper_90,linewidth=2,linestyle='dashed',color='k')
+ax6.axvline(x=INC_50_lower_90,linewidth=2,linestyle='dashed',color='k')
+ax6.axvline(x=inj_v,linewidth=2, color='r')
+
+ax7 = fig.add_subplot(437)
+ax7.hist(chi_p_INC_60,50, facecolor='g', normed=True)
+
+ax7.axvline(x=INC_60_upper_90,linewidth=2,linestyle='dashed',color='k')
+ax7.axvline(x=INC_60_lower_90,linewidth=2,linestyle='dashed',color='k')
+ax7.axvline(x=inj_v,linewidth=2, color='r')
+
+
+plt.savefig("chi_mix_plot1.png")
 
