@@ -156,7 +156,7 @@ fig.text(0.5, 0.04, 'chi_p', ha='center', va='center')
 fig.text(0.06, 0.5, 'probability density', ha='center', va='center', rotation='vertical')
 fig.tight_layout()
 fig.set_figheight(15)
-fig.set_figwidth(15)
+fig.set_figwidth(10)
 
-plt.savefig("chi_mix_plot4.png")
+plt.savefig("chi_mix_plot5.png")
 
