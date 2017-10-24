@@ -154,6 +154,7 @@ ax6.set_title('Inclination 60.0 deg')
 
 fig.text(0.5, 0.04, 'chi_p', ha='center', va='center')
 fig.text(0.06, 0.5, 'probability density', ha='center', va='center', rotation='vertical')
+fig.tight_layout()
 
-plt.savefig("chi_mix_plot2.png")
+plt.savefig("chi_mix_plot3.png")
 
