@@ -6,7 +6,7 @@ import sys
 
 print "Initialising..."
 
-injected_value=0.75
+inj_v=0.75
 
 #manually set injection value
 
@@ -88,15 +88,24 @@ chi_p_INC_60 = chi_p_7()
 INC_60_upper_90=np.percentile(chi_p_INC_60, 95)
 INC_60_lower_90=np.percentile(chi_p_INC_60, 5)
 
+fig = plt.figure(figsize=(6, 4))
 
-plt.hist(chi_p,50, facecolor='m', normed=True)
-#plt.hist(pycbc_data,50, normed=True, color='b')
-plt.xlabel('chi_p')
-#plt.axvline(x=Lal_lower_90,linewidth=2,linestyle='dashed',color='m')
-#plt.axvline(x=Lal_upper_90,linewidth=2,linestyle='dashed',color='m')
-#plt.axvline(x=pycbc_lower_90,linewidth=2,linestyle='dashed',color='k')
-#plt.axvline(x=pycbc_upper_90,linewidth=2,linestyle='dashed',color='k')
-plt.axvline(x=0.5,linewidth=2, color='r')
-plt.axis([0, 1, 0,10 ])
-plt.ylabel('probability density')
-plt.savefig("95-chi.png")
+sub1 = fig.add_subplot(121)
+sub1.hist(chi_p_INC_0,50, facecolor='m', normed=True)
+sub1.xlabel('chi_p')
+sub1.axvline(x=0.5,linewidth=2, color='r')
+sub1.axvline(x=INC_0_upper_90,linewidth=2,linestyle='dashed',color='m')
+sub1.axvline(x=INC_0_lower_90,linewidth=2,linestyle='dashed',color='m')
+sub1.ylabel('probability density')
+
+sub2 = fig.add_subplot(122)
+
+sub2.hist(chi_p_INC_10,50, facecolor='m', normed=True)
+sub2.xlabel('chi_p')
+sub2.axvline(x=0.75,linewidth=2, color='r')
+sub2.axvline(x=INC_10_upper_90,linewidth=2,linestyle='dashed',color='m')
+sub2.axvline(x=INC_10_lower_90,linewidth=2,linestyle='dashed',color='m')
+sub2.ylabel('probability density')
+
+plt.tight_layout()
+plt.savefig("chi_mix_plot.png")
