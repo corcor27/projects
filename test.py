@@ -17,10 +17,23 @@ def chi_p_1():
         data.append([float(x) for x in line.split()])
     Chi_p_1 = [x[52] for x in data ]
     return Chi_p_1 
+
+def chi_p_2():
+    data = []
+    g = open('M40_INC_10.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    Chi_p_2 = [x[52] for x in data ]
+    return Chi_p_2 
     
 chi_p_INC_0 = chi_p_1()
 INC_0_upper_90=np.percentile(chi_p_INC_0, 95)
 INC_0_lower_90=np.percentile(chi_p_INC_0, 5)
+
+chi_p_INC_10 = chi_p_2()
+INC_10_upper_90=np.percentile(chi_p_INC_10, 95)
+INC_10_lower_90=np.percentile(chi_p_INC_10, 5)
+
 plt.hist(chi_p_INC_0,50, facecolor='m', normed=True)
 #plt.hist(pycbc_data,50, normed=True, color='b')
 plt.xlabel('chi_p')
@@ -28,6 +41,6 @@ plt.xlabel('chi_p')
 #plt.axvline(x=Lal_upper_90,linewidth=2,linestyle='dashed',color='m')
 #plt.axvline(x=pycbc_lower_90,linewidth=2,linestyle='dashed',color='k')
 #plt.axvline(x=pycbc_upper_90,linewidth=2,linestyle='dashed',color='k')
-plt.axvline(x=0.75,linewidth=2, color='r')
+plt.axvline(x=inj_v,linewidth=2, color='r')
 plt.ylabel('probability density')
 plt.savefig("chi_mix_plot.png")
