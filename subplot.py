@@ -156,5 +156,5 @@ ax.set_xlabel('chi_p')
 ax.set_ylabel('probability density')
 
 
-plt.savefig("chi_mix_plot1.png")
+plt.savefig("chi_mix_plot2.png")
 
