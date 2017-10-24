@@ -18,21 +18,22 @@ def chi_p_1():
     Chi_p_1 = [x[52] for x in data ]
     return Chi_p_1 
 
-def chi_p_2():
+def chi_p_3():
     data = []
-    g = open('M40_INC_10.0.txt', 'r')
+    g = open('M40_INC_20.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    Chi_p_2 = [x[52] for x in data ]
-    return Chi_p_2 
+    Chi_p_3 = [x[52] for x in data ]
+    return Chi_p_3 
+
     
 chi_p_INC_0 = chi_p_1()
 INC_0_upper_90=np.percentile(chi_p_INC_0, 95)
 INC_0_lower_90=np.percentile(chi_p_INC_0, 5)
 
-chi_p_INC_10 = chi_p_2()
-INC_10_upper_90=np.percentile(chi_p_INC_10, 95)
-INC_10_lower_90=np.percentile(chi_p_INC_10, 5)
+chi_p_INC_20 = chi_p_3()
+INC_20_upper_90=np.percentile(chi_p_INC_20, 95)
+INC_20_lower_90=np.percentile(chi_p_INC_20, 5)
 
 plt.hist(chi_p_INC_0,50, facecolor='m', normed=True)
 #plt.hist(pycbc_data,50, normed=True, color='b')
