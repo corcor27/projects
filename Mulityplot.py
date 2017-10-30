@@ -57,9 +57,9 @@ def chi_p_3_MPE():
     f = open('M40_INC_20.0.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
-    saved_chi_p_2 = [x[52] for x in data ]
-    mean_val_2=np.average(saved_chi_p_2)
-    MPE_2 = (abs(mean_val_2 - injected_value) / injected_value) * 100
+    saved_chi_p_3 = [x[52] for x in data ]
+    mean_val_3=np.average(saved_chi_p_3)
+    MPE_3 = (abs(mean_val_3 - injected_value) / injected_value) * 100
     return MPE_3
 
 def chi_p_3_90PE():
@@ -70,7 +70,7 @@ def chi_p_3_90PE():
     saved_chi_p_3 = [x[52] for x in data ]
     upper_90_3=np.percentile(saved_chi_p_3, 95)
     mean_val_3=np.average(saved_chi_p_3)
-    PE_2 = (abs(upper_90_3 - injected_value) / injected_value) * 100
+    PE_3 = (abs(upper_90_3 - injected_value) / injected_value) * 100
     return PE_3
 
 def chi_p_4_MPE():
