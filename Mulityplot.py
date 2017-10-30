@@ -191,8 +191,8 @@ ax2.set_title('Inclination_line')
 fig.tight_layout()
 fig.set_figheight(15)
 fig.set_figwidth(10)
+fig.suptitle("Inclination error", fontsize=16)
 
-plt.suptitle('Inclination error')
 
 # Set common labels
 ax.set_xlabel('Inclination (degrees)')
