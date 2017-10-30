@@ -6,7 +6,7 @@ import sys
 
 print "Initialising..."
 
-injected_value=0.5
+injected_value=0.75
 Incliations = [0,10,20,30,40,50,60]
 #manually set injection value
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
@@ -182,4 +182,4 @@ plt.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliatio
 plt.xlabel('Inclination (degrees)')
 plt.ylabel('Percentage error')
 plt.legend(loc='lower right', fontsize=10.5)
-plt.savefig("Inc_precent_error.png")
+plt.savefig("Inc_test1.png")
