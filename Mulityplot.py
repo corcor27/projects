@@ -192,7 +192,7 @@ fig.tight_layout()
 fig.set_figheight(5)
 fig.set_figwidth(10)
 fig.suptitle("Inclination error", fontsize=16)
-fig.grid(False)
+fig.set_ylabel('This is a long label shared among more axes', fontsize=14)
 
 # Set common labels
 
