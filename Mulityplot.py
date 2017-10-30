@@ -200,4 +200,4 @@ fig.text(0.5, 0.04, 'Inclination (degrees)', ha='center', va='center')
 fig.text(0.06, 0.5, 'Percentage error', ha='center', va='center', rotation='vertical')
 
 plt.title("Estimation of chi_p with varying inclination")
-plt.savefig("Inc_test3.png")
+plt.savefig("Inc_test4.png")
