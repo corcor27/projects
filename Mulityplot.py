@@ -192,7 +192,7 @@ fig.tight_layout()
 fig.set_figheight(5)
 fig.set_figwidth(10)
 fig.suptitle("Inclination error", fontsize=16)
-
+fig.grid(False)
 
 # Set common labels
 
@@ -200,4 +200,4 @@ fig.text(0.5, 0.04, 'Inclination (degrees)', ha='center', va='center')
 fig.text(0.06, 0.5, 'Percentage error', ha='center', va='center', rotation='vertical')
 
 plt.title("Estimation of chi_p with varying inclination")
-plt.savefig("Inc_test4.png")
+plt.savefig("Inc_test5.png")
