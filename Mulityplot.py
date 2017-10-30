@@ -7,7 +7,7 @@ import sys
 print "Initialising..."
 
 injected_value=0.5
-
+Incliations = [
 #manually set injection value
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
 def chi_p_1_MPE():
@@ -177,4 +177,9 @@ run7PE = chi_p_7_90PE()
 
 a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE]
 ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE]
-print (a,ae)
+
+plt.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
+plt.xlabel('Inclination (degrees)')
+plt.ylabel('Percentage error')
+plt.legend(loc='lower right', fontsize=10.5)
+plt.savefig("Inc_precent_error.png")
