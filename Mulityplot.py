@@ -9,7 +9,7 @@ print "Initialising..."
 injected_value=0.5
 
 #manually set injection value
-
+#two functions for each text.file, allowing the creations for MPE and 90PE parameter
 def chi_p_1_MPE():
     data = []
     g = open('M40_INC_0.0.txt', 'r')
@@ -156,6 +156,7 @@ def chi_p_7_90PE():
     mean_val_7=np.average(saved_chi_p_7)
     PE_7 = (abs(upper_90_7 - injected_value) / injected_value) * 100
     return PE_7
+# recovered values from functions 
 
 run1MPE = chi_p_1_MPE()
 run1PE = chi_p_1_90PE()
@@ -172,4 +173,8 @@ run6PE = chi_p_6_90PE()
 run7MPE = chi_p_7_MPE()
 run7PE = chi_p_7_90PE()
 
-print(run1MPE,run1PE,run2MPE,run2PE,run3MPE,run3PE,run4MPE,run4PE,run5MPE,run5PE,run6MPE,run6PE,run7MPE,run7PE) 
+# now have values sorted into list
+
+a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE]
+ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE]
+print (a,ae)
