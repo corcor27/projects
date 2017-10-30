@@ -195,8 +195,8 @@ fig.suptitle("Inclination error", fontsize=16)
 
 
 # Set common labels
-ax.set_xlabel('Inclination (degrees)')
-ax.set_ylabel('Percentage error')
+fig.set_xlabel('Inclination (degrees)')
+fig.set_ylabel('Percentage error')
 
 
 plt.title("Estimation of chi_p with varying inclination")
