@@ -178,8 +178,18 @@ run7PE = chi_p_7_90PE()
 a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE]
 ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE]
 
-plt.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
-plt.xlabel('Inclination (degrees)')
-plt.ylabel('Percentage error')
-plt.legend(loc='lower right', fontsize=10.5)
-plt.savefig("Inc_test1.png")
+fig = plt.figure()
+
+ax1 = fig.add_subplot(121)
+ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
+ax1.xlabel('Inclination (degrees)')
+ax1.ylabel('Percentage error')
+ax1.legend(loc='lower right', fontsize=10.5)
+
+ax2 = fig.add_subplot(122)
+ax2.plot(Inclinations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
+ax2.xlabel('Inclination (degrees)')
+ax2.ylabel('Percentage error')
+
+plt.title("Estimation of chi_p with varying inclination")
+plt.savefig("Inc_test2.png")
