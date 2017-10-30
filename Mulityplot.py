@@ -186,7 +186,7 @@ ax1.legend(loc='lower right', fontsize=10.5)
 ax1.set_title('Inclination_scatter')
 
 ax2 = fig.add_subplot(122)
-ax2.plot(x=Inclinations, y=a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
+ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
 ax2.set_title('Inclination_line')
 fig.tight_layout()
 fig.set_figheight(15)
