@@ -7,7 +7,7 @@ import sys
 print "Initialising..."
 
 injected_value=0.5
-Incliations = [
+Incliations = [0,10,20,30,40,50,60]
 #manually set injection value
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
 def chi_p_1_MPE():
