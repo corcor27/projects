@@ -182,14 +182,22 @@ fig = plt.figure()
 
 ax1 = fig.add_subplot(121)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
-ax1.xlabel('Inclination (degrees)')
-ax1.ylabel('Percentage error')
 ax1.legend(loc='lower right', fontsize=10.5)
+ax1.set_title('Inclination_scatter')
 
 ax2 = fig.add_subplot(122)
 ax2.plot(Inclinations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
-ax2.xlabel('Inclination (degrees)')
-ax2.ylabel('Percentage error')
+ax2.set_title('Inclination_line')
+fig.tight_layout()
+fig.set_figheight(15)
+fig.set_figwidth(10)
+
+plt.suptitle('Inclination error')
+
+# Set common labels
+ax.set_xlabel('Inclination (degrees)')
+ax.set_ylabel('Percentage error')
+
 
 plt.title("Estimation of chi_p with varying inclination")
-plt.savefig("Inc_test2.png")
+plt.savefig("Inc_test3.png")
