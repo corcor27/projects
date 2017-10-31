@@ -298,4 +298,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Huge_plot3.png")
+plt.savefig("Huge_plot4.png")
