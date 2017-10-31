@@ -291,11 +291,11 @@ ax6.set_xlabel('Mc', fontsize=12)
 
 
 fig.tight_layout()
-fig.set_figheight(5)
+fig.set_figheight(10)
 fig.set_figwidth(5)
 
 
 # Set common labels
 
 
-plt.savefig("Huge_plot7.png")
+plt.savefig("Huge_plot8.png")
