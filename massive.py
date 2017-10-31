@@ -220,6 +220,13 @@ run3MPE = chi_p_3_MPE()
 run3PE = chi_p_3_90PE()
 run4MPE = chi_p_4_MPE()
 run4PE = chi_p_4_90PE()
+run5MPE = chi_p_5_MPE()
+run5PE = chi_p_5_90PE()
+run6MPE = chi_p_6_MPE()
+run6PE = chi_p_6_90PE()
+run7MPE = chi_p_7_MPE()
+run7PE = chi_p_7_90PE()
+
 
 
 # now have values sorted into list
