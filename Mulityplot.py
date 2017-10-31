@@ -178,7 +178,7 @@ run7PE = chi_p_7_90PE()
 a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE]
 ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE]
 
-fig = plt.figure()
+fig, ax = plt.subplots(nrows=1, ncols=2, sharex=True, sharey=True, figsize=(6, 6))
 
 ax1 = fig.add_subplot(121)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
@@ -192,7 +192,6 @@ fig.tight_layout()
 fig.set_figheight(5)
 fig.set_figwidth(10)
 fig.suptitle("Inclination error", fontsize=16)
-fig.set_ylabel('This is a long label shared among more axes', fontsize=14)
 
 # Set common labels
 
