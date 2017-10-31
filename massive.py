@@ -242,12 +242,14 @@ ax1.legend(loc='lower right', fontsize=10.5)
 ax1.set_title('Inclination_scatter')
 ax1.set_xlabel('Precentage error (%)', fontsize=12)
 ax1.set_ylabel('Inclination (Degrees)', fontsize=12)
+ax1.axis([-10, 70, -15, 25])
 
 ax2 = fig.add_subplot(322)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
 ax2.set_title('Inclination_line')
 ax2.set_xlabel('Precentage error (%)', fontsize=12)
 ax2.set_ylabel('Inclination (Degrees)', fontsize=12)
+ax2.axis([-10, 70, 0, 9])
 # plot histograms
 
 ax3 = fig.add_subplot(323)
