@@ -178,7 +178,7 @@ run7PE = chi_p_7_90PE()
 a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE]
 ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE]
 
-fig = plt.figure(sharex=True, sharey=True, figsize=(6, 6))
+fig = plt.figure()
 
 ax1 = fig.add_subplot(121)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
