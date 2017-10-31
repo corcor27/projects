@@ -190,7 +190,8 @@ ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incl
 ax2.set_title('Inclination_line')
 
 fig.tight_layout()
-
+fig.set_figheight(5)
+fig.set_figwidth(10)
 fig.suptitle("Inclination error", fontsize=16)
 
 # Set common labels
