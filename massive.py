@@ -277,4 +277,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Mass_plot1.png")
+plt.savefig("Huge_plot1.png")
