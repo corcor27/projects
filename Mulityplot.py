@@ -179,7 +179,7 @@ a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE]
 ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE]
 
 fig = plt.figure()
-
+ax = fig.add_subplot(111)
 ax1 = fig.add_subplot(121)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
 ax1.legend(loc='lower right', fontsize=10.5)
@@ -198,4 +198,4 @@ fig.suptitle("Inclination error", fontsize=16)
 
 fig.text(0.5, 0.04, 'Inclination (degrees)', ha='center', va='center')
 fig.text(0.06, 0.5, 'Percentage error', ha='center', va='center', rotation='vertical')
-plt.savefig("Inc_test7.png")
+plt.savefig("Inc_test8.png")
