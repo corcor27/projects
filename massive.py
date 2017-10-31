@@ -240,13 +240,14 @@ ax1 = fig.add_subplot(321)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
 ax1.legend(loc='lower right', fontsize=10.5)
 ax1.set_title('Inclination_scatter')
-ax1.set_xlabel('x-label', fontsize=12)
-ax1.set_ylabel('y-label', fontsize=12)
+ax1.set_xlabel('Precentage error (%)', fontsize=12)
+ax1.set_ylabel('Inclination (Degrees)', fontsize=12)
 
 ax2 = fig.add_subplot(322)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
 ax2.set_title('Inclination_line')
-
+ax2.set_xlabel('Precentage error (%)', fontsize=12)
+ax2.set_ylabel('Inclination (Degrees)', fontsize=12)
 # plot histograms
 
 ax3 = fig.add_subplot(323)
@@ -255,6 +256,9 @@ ax3.axvline(x=INC_0_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax3.axvline(x=INC_0_lower_90,linewidth=2,linestyle='dashed',color='k')
 ax3.axvline(x=injected_value,linewidth=2, color='r')
 ax3.set_title('chi_p at Inc 0.0 deg')
+ax3.set_xlabel('probability density', fontsize=12)
+ax3.set_ylabel('chi_p', fontsize=12)
+
 
 ax4 = fig.add_subplot(324)
 ax4.hist(chi_p_INC_10,50, facecolor='g', normed=True)
@@ -262,6 +266,8 @@ ax4.axvline(x=INC_10_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax4.axvline(x=INC_10_lower_90,linewidth=2,linestyle='dashed',color='k')
 ax4.axvline(x=injected_value,linewidth=2, color='r')
 ax4.set_title('Chi_p at Inc 50.0 deg')
+ax4.set_xlabel('probability density', fontsize=12)
+ax4.set_ylabel('chi_p', fontsize=12)
 
 ax5 = fig.add_subplot(325)
 ax5.hist(chi_p_INC_20,50, facecolor='g', normed=True)
@@ -269,6 +275,8 @@ ax5.axvline(x=INC_20_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax5.axvline(x=INC_20_lower_90,linewidth=2,linestyle='dashed',color='k')
 ax5.axvline(x=m_c,linewidth=2, color='r')
 ax5.set_title('Mc at Inc 0.0 deg')
+ax5.set_xlabel('probability density', fontsize=12)
+ax5.set_ylabel('Mc', fontsize=12)
 
 ax6 = fig.add_subplot(326)
 ax6.hist(chi_p_INC_30,50, facecolor='g', normed=True)
@@ -276,6 +284,8 @@ ax6.axvline(x=INC_30_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax6.axvline(x=INC_30_lower_90,linewidth=2,linestyle='dashed',color='k')
 ax6.axvline(x=m_c,linewidth=2, color='r')
 ax6.set_title('Mc at Inc 50.0 deg')
+ax6.set_xlabel('probability density', fontsize=12)
+ax6.set_ylabel('Mc', fontsize=12)
 
 
 fig.tight_layout()
@@ -286,4 +296,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Huge_plot2.png")
+plt.savefig("Huge_plot3.png")
