@@ -7,7 +7,7 @@ import sys
 print "Initialising..."
 
 injected_value=0.75
-m_c = 
+m_c = 13.32
 Incliations = [0,10,20,30,40,50,60]
 #manually set injection value
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
@@ -177,7 +177,7 @@ def chi_p_2():
 
 def chi_p_3():
     data = []
-    g = open('M40_INC_50.0.txt', 'r')
+    g = open('M40_INC_0.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_3 = [x[61] for x in data ]
@@ -258,14 +258,14 @@ ax5 = fig.add_subplot(325)
 ax5.hist(chi_p_INC_20,50, facecolor='g', normed=True)
 ax5.axvline(x=INC_20_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax5.axvline(x=INC_20_lower_90,linewidth=2,linestyle='dashed',color='k')
-ax5.axvline(x=inj_v,linewidth=2, color='r')
+ax5.axvline(x=m_c,linewidth=2, color='r')
 ax5.set_title('Mc at Inc 0.0 deg')
 
 ax6 = fig.add_subplot(326)
 ax6.hist(chi_p_INC_30,50, facecolor='g', normed=True)
 ax6.axvline(x=INC_30_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax6.axvline(x=INC_30_lower_90,linewidth=2,linestyle='dashed',color='k')
-ax6.axvline(x=inj_v,linewidth=2, color='r')
+ax6.axvline(x=m_c,linewidth=2, color='r')
 ax6.set_title('Mc at Inc 50.0 deg')
 
 
