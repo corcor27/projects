@@ -1,0 +1,2 @@
+fig.set_figheight(5)
+fig.set_figwidth(10)
