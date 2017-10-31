@@ -198,4 +198,4 @@ fig.suptitle("Inclination error", fontsize=16)
 
 fig.text(0.5, 0.04, 'Inclination (degrees)', ha='center', va='center')
 fig.text(0.06, 0.5, 'Percentage error', ha='center', va='center', rotation='vertical')
-plt.savefig("Inc_test6.png")
+plt.savefig("Inc_test7.png")
