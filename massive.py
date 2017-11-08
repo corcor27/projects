@@ -158,6 +158,47 @@ def chi_p_7_90PE():
     mean_val_7=np.average(saved_chi_p_7)
     PE_7 = (abs(upper_90_7 - injected_value) / injected_value) * 100
     return PE_7
+def chi_p_8_MPE():
+    data = []
+    f = open('M40_INC_70.0.txt', 'r')
+    for line in f:
+        data.append([float(x) for x in line.split()])
+    saved_chi_p_8 = [x[52] for x in data ]
+    mean_val_8=np.average(saved_chi_p_8)
+    MPE_8 = (abs(mean_val_8 - injected_value) / injected_value) * 100
+    return MPE_8
+
+def chi_p_8_90PE():
+    data = []
+    f = open('M40_INC_70.0.txt', 'r')
+    for line in f:
+        data.append([float(x) for x in line.split()])
+    saved_chi_p_8 = [x[52] for x in data ]
+    upper_90_8=np.percentile(saved_chi_p_8, 95)
+    mean_val_8=np.average(saved_chi_p_8)
+    PE_8 = (abs(upper_90_8 - injected_value) / injected_value) * 100
+    return PE_8
+
+def chi_p_9_MPE():
+    data = []
+    f = open('M40_INC_80.0.txt', 'r')
+    for line in f:
+        data.append([float(x) for x in line.split()])
+    saved_chi_p_9 = [x[52] for x in data ]
+    mean_val_9=np.average(saved_chi_p_9)
+    MPE_9 = (abs(mean_val_9 - injected_value) / injected_value) * 100
+    return MPE_9
+
+def chi_p_9_90PE():
+    data = []
+    f = open('M40_INC_80.0.txt', 'r')
+    for line in f:
+        data.append([float(x) for x in line.split()])
+    saved_chi_p_9 = [x[52] for x in data ]
+    upper_90_9=np.percentile(saved_chi_p_9, 95)
+    mean_val_9=np.average(saved_chi_p_9)
+    PE_9 = (abs(upper_90_9 - injected_value) / injected_value) * 100
+    return PE_9
 
 def chi_p_1():
     data = []
@@ -226,13 +267,17 @@ run6MPE = chi_p_6_MPE()
 run6PE = chi_p_6_90PE()
 run7MPE = chi_p_7_MPE()
 run7PE = chi_p_7_90PE()
+run8MPE = chi_p_8_MPE()
+run8PE = chi_p_8_90PE()
+run9MPE = chi_p_9_MPE()
+run9PE = chi_p_9_90PE()
 
 
 
 # now have values sorted into list
 
-a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE]
-ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE]
+a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE,run8MPE,run9MPE]
+ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE,run8PE,run9PE]
 
 fig = plt.figure()
 
@@ -242,14 +287,14 @@ ax1.legend(loc='lower right', fontsize=10.5)
 ax1.set_title('Inclination_scatter')
 ax1.set_ylabel('Precentage error (%)', fontsize=12)
 ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
-ax1.axis([-10, 70, -15, 25])
+ax1.axis([-10, 90, -15, 25])
 
 ax2 = fig.add_subplot(322)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
 ax2.set_title('Inclination_line')
 ax2.set_ylabel('Precentage error (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
-ax2.axis([-10, 70, 0, 9])
+ax2.axis([-10, 90, 0, 9])
 # plot histograms
 
 ax3 = fig.add_subplot(323)
@@ -298,4 +343,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Huge_plot9.png")
+plt.savefig("Huge_plot10.png")
