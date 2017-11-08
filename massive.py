@@ -8,7 +8,7 @@ print "Initialising..."
 
 injected_value=0.75
 m_c = 13.32
-Incliations = [0,10,20,30,40,50,60]
+Incliations = [0,10,20,30,40,50,60,70,80]
 #manually set injection value
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
 
