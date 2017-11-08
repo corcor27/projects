@@ -229,12 +229,12 @@ fig = plt.figure()
 ax1 = fig.add_subplot(121)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
 ax1.legend(loc='lower right', fontsize=10.5)
-
+ax1.axis([-10, 90, -15, 25])
 ax1.set_title('Inclination_scatter')
 
 ax2 = fig.add_subplot(122)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
-
+ax2.axis([-10, 90, 0, 9])
 ax2.set_title('Inclination_line')
 
 fig.tight_layout()
