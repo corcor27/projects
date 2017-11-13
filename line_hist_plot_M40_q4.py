@@ -626,8 +626,8 @@ ax5.set_ylabel('Precentage error q (%)', fontsize=12)
 ax5.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 fig.tight_layout()
-fig.set_figheight(20)
-fig.set_figwidth(25)
+fig.set_figheight(15)
+fig.set_figwidth(20)
 
 
 
@@ -635,4 +635,4 @@ fig.set_figwidth(25)
 # Set common labels
 
 
-plt.savefig("Inc_his9.png")
+plt.savefig("Inc_his10.png")
