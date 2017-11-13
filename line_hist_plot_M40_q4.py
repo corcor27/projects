@@ -835,7 +835,7 @@ ax6.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'chi_
 ax6.plot(Incliations, b, linewidth=2,linestyle='dashed',color='b', label = 'q')
 ax6.plot(Incliations, c, linewidth=2,linestyle='dashed',color='m', label = 'Mc')
 ax6.plot(Incliations, d, linewidth=2,linestyle='dashed',color='lightcoral', label = 'q/Mc')
-ax6.legend(loc='lower right', fontsize=10.5)
+ax6.legend(loc='upper right', fontsize=10.5)
 ax6.axis([-10, 90, 0, 10])
 ax6.set_title('Inclination_line_40M_q4_s1x=0.75')
 ax6.set_ylabel('Precentage error (%)', fontsize=12)
@@ -851,4 +851,4 @@ fig.set_figwidth(20)
 # Set common labels
 
 
-plt.savefig("Inc_his12.png")
+plt.savefig("Inc_his13.png")
