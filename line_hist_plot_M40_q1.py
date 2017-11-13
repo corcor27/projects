@@ -650,6 +650,9 @@ q_INC_80_upper_90=np.percentile(q_INC_80, 95)
 q_INC_80_lower_90=np.percentile(q_INC_80, 5)
 q_80_mean_val_1=np.average(q_INC_80)
 
+b = [q_MPE_1,q_MPE_2,q_MPE_3,q_MPE_4,q_MPE_5,q_MPE_6,q_MPE_7,q_MPE_8,q_MPE_9]
+be = [q_PE_1,q_PE_2,q_PE_3,q_PE_4,q_PE_5,q_PE_6,q_PE_7,q_PE_8,q_PE_9]
+
 fig = plt.figure()
 
 ax1 = fig.add_subplot(321)
