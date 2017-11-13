@@ -522,6 +522,7 @@ ax3.hist(chi_p_INC_70,50, facecolor='skyblue', normed=True, label = '70 deg')
 ax3.hist(chi_p_INC_80,50, facecolor='lightcoral', normed=True, label = '80 deg')
 #plt.hist(pycbc_data,50, normed=True, color='b')
 ax3.set_xlabel('chi_p')
+ax3.axis([0, 1.5, 0, 3])
 #plt.axvline(x=Lal_lower_90,linewidth=2,linestyle='dashed',color='m')
 #plt.axvline(x=Lal_upper_90,linewidth=2,linestyle='dashed',color='m')
 #plt.axvline(x=pycbc_lower_90,linewidth=2,linestyle='dashed',color='k')
@@ -544,7 +545,8 @@ ax4.hist(q_INC_80,50, facecolor='lightcoral', normed=True, label = '80 deg')
 ax4.set_xlabel('q')
 ax4.axvline(x=injected_q,linewidth=2, color='r')
 ax4.set_ylabel('probability density')
-ax4.legend(loc='upper left', fontsize=10.5)
+ax4.axis([1, 3, 0, 3.5])
+ax4.legend(loc='upper right', fontsize=10.5)
 
 
 fig.tight_layout()
@@ -557,4 +559,4 @@ fig.set_figwidth(15)
 # Set common labels
 
 
-plt.savefig("Inc_his_q1_1.png")
+plt.savefig("Inc_his_q1_2.png")
