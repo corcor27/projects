@@ -481,24 +481,34 @@ m1_m2_INC_70 = np.add(m1_INC_70, m2_INC_70)
 m1_m2_INC_80 = np.add(m1_INC_80, m2_INC_80)
 
 TM0 = list(np.array(m1m2_INC_0)**0.6)
-TM10 = list(np.array(m1m2_INC_10**0.6)
-TM20 = list(np.array(m1m2_INC_20**0.6)
-TM30 = list(np.array(m1m2_INC_30**0.6)
-TM40 = list(np.array(m1m2_INC_40**0.6)
-TM50 = list(np.array(m1m2_INC_50**0.6)
-TM60 = list(np.array(m1m2_INC_60**0.6)
-TM70 = list(np.array(m1m2_INC_70**0.6)
-TM80 = list(np.array(m1m2_INC_80**0.6)
+TM10 = list(np.array(m1m2_INC_10)**0.6)
+TM20 = list(np.array(m1m2_INC_20)**0.6)
+TM30 = list(np.array(m1m2_INC_30)**0.6)
+TM40 = list(np.array(m1m2_INC_40)**0.6)
+TM50 = list(np.array(m1m2_INC_50)**0.6)
+TM60 = list(np.array(m1m2_INC_60)**0.6)
+TM70 = list(np.array(m1m2_INC_70)**0.6)
+TM80 = list(np.array(m1m2_INC_80)**0.6)
 
-LM0= list(np.array(m1m2_INC_0)**0.6)
-TM10 = list(np.array(m1m2_INC_10**0.6)
-TM20 = list(np.array(m1m2_INC_20**0.6)
-TM30 = list(np.array(m1m2_INC_30**0.6)
-TM40 = list(np.array(m1m2_INC_40**0.6)
-TM50 = list(np.array(m1m2_INC_50**0.6)
-TM60 = list(np.array(m1m2_INC_60**0.6)
-TM70 = list(np.array(m1m2_INC_70**0.6)
-TM80 = list(np.array(m1m2_INC_80**0.6)
+LM0 = list(np.array(m1_m2_INC_0)**0.2)
+LM10 = list(np.array(m1_m2_INC_10)**0.2)
+LM20 = list(np.array(m1_m2_INC_20)**0.2)
+LM30 = list(np.array(m1_m2_INC_30)**0.2)
+LM40 = list(np.array(m1_m2_INC_40)**0.2)
+LM50 = list(np.array(m1_m2_INC_50)**0.2)
+LM60 = list(np.array(m1_m2_INC_60)**0.2)
+LM70 = list(np.array(m1_m2_INC_70)**0.2)
+LM80 = list(np.array(m1_m2_INC_80)**0.2)
+
+Mc_0 = map(truediv, TM0, LM0)
+Mc_10 = map(truediv, TM10, LM10)
+Mc_20 = map(truediv, TM20, LM20)
+Mc_30 = map(truediv, TM30, LM30)
+Mc_40 = map(truediv, TM40, LM40)
+Mc_50 = map(truediv, TM50, LM50)
+Mc_60 = map(truediv, TM60, LM60)
+Mc_70 = map(truediv, TM70, LM70)
+Mc_80 = map(truediv, TM80, LM80)
 
 # create q values
 q_INC_0 = map(truediv, m1_INC_0, m2_INC_0)
@@ -536,6 +546,8 @@ run9PE = chi_p_9_90PE()
 
 a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE,run8MPE,run9MPE]
 ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE,run8PE,run9PE]
+
+#create q 
 q_INC_0_upper_90=np.percentile(q_INC_0, 95)
 q_INC_0_lower_90=np.percentile(q_INC_0, 5)
 q_0_mean_val_1=np.average(q_INC_0)
@@ -572,35 +584,71 @@ q_INC_80_upper_90=np.percentile(q_INC_80, 95)
 q_INC_80_lower_90=np.percentile(q_INC_80, 5)
 q_80_mean_val_1=np.average(q_INC_80)
 
-q_MPE_1 = (abs(q_0_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_1 = (abs(q_INC_0_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_1 = (abs(Mc_0_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_1 = (abs(Mc_INC_0_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_2 = (abs(q_10_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_2 = (abs(q_INC_10_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_2 = (abs(Mc_10_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_2 = (abs(Mc_INC_10_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_3 = (abs(q_20_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_3 = (abs(q_INC_20_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_3 = (abs(Mc_20_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_3 = (abs(Mc_INC_20_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_4 = (abs(q_30_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_4 = (abs(q_INC_30_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_4 = (abs(Mc_30_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_4 = (abs(Mc_INC_30_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_5 = (abs(q_40_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_5 = (abs(q_INC_40_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_5 = (abs(Mc_40_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_5 = (abs(Mc_INC_40_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_6 = (abs(q_50_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_6 = (abs(q_INC_50_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_6 = (abs(Mc_50_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_6 = (abs(Mc_INC_50_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_7 = (abs(q_60_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_7 = (abs(q_INC_60_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_7 = (abs(Mc_60_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_7 = (abs(Mc_INC_60_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_8 = (abs(q_70_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_8 = (abs(q_INC_70_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_8 = (abs(Mc_70_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_8 = (abs(Mc_INC_70_upper_90 - injected_Mc) / injected_Mc) * 100
 
-q_MPE_9 = (abs(q_80_mean_val_1 - injected_q) / injected_q) * 100
-q_PE_9 = (abs(q_INC_80_upper_90 - injected_q) / injected_q) * 100
+Mc_MPE_9 = (abs(Mc_80_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_9 = (abs(Mc_INC_80_upper_90 - injected_Mc) / injected_Mc) * 100
 
-b = [q_MPE_1,q_MPE_2,q_MPE_3,q_MPE_4,q_MPE_5,q_MPE_6,q_MPE_7,q_MPE_8,q_MPE_9]
-be = [q_PE_1,q_PE_2,q_PE_3,q_PE_4,q_PE_5,q_PE_6,q_PE_7,q_PE_8,q_PE_9]
+c = [Mc_MPE_1,Mc_MPE_2,Mc_MPE_3,Mc_MPE_4,Mc_MPE_5,Mc_MPE_6,Mc_MPE_7,Mc_MPE_8,Mc_MPE_9]
+ce = [Mc_PE_1,Mc_PE_2,Mc_PE_3,Mc_PE_4,Mc_PE_5,Mc_PE_6,Mc_PE_7,Mc_PE_8,Mc_PE_9]
+
+q_INC_0_upper_90=np.percentile(q_INC_0, 95)
+q_INC_0_lower_90=np.percentile(q_INC_0, 5)
+q_0_mean_val_1=np.average(q_INC_0)
+
+q_INC_10_upper_90=np.percentile(q_INC_10, 95)
+q_INC_10_lower_90=np.percentile(q_INC_10, 5)
+q_10_mean_val_1=np.average(q_INC_10)
+
+q_INC_20_upper_90=np.percentile(q_INC_20, 95)
+q_INC_20_lower_90=np.percentile(q_INC_20, 5)
+q_20_mean_val_1=np.average(q_INC_20)
+
+q_INC_30_upper_90=np.percentile(q_INC_30, 95)
+INC_30_lower_90=np.percentile(q_INC_30, 5)
+q_30_mean_val_1=np.average(q_INC_30)
+
+q_INC_40_upper_90=np.percentile(q_INC_40, 95)
+q_INC_40_lower_90=np.percentile(q_INC_40, 5)
+q_40_mean_val_1=np.average(q_INC_40)
+
+q_INC_50_upper_90=np.percentile(q_INC_50, 95)
+q_INC_50_lower_90=np.percentile(q_INC_50, 5)
+q_50_mean_val_1=np.average(q_INC_50)
+
+q_INC_60_upper_90=np.percentile(q_INC_60, 95)
+q_INC_60_lower_90=np.percentile(q_INC_60, 5)
+q_60_mean_val_1=np.average(q_INC_60)
+
+q_INC_70_upper_90=np.percentile(q_INC_70, 95)
+q_INC_70_lower_90=np.percentile(q_INC_70, 5)
+q_70_mean_val_1=np.average(q_INC_70)
+
+q_INC_80_upper_90=np.percentile(q_INC_80, 95)
+q_INC_80_lower_90=np.percentile(q_INC_80, 5)
+q_80_mean_val_1=np.average(q_INC_80)
 
 fig = plt.figure()
 
