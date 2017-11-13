@@ -377,8 +377,8 @@ ax3.legend(loc='upper left', fontsize=10.5)
 
 
 fig.tight_layout()
-fig.set_figheight(5)
-fig.set_figwidth(10)
+fig.set_figheight(10)
+fig.set_figwidth(15)
 
 
 
@@ -386,4 +386,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Inc_his2.png")
+plt.savefig("Inc_his3.png")
