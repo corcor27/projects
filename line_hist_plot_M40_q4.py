@@ -523,12 +523,12 @@ q_INC_60_upper_90=np.percentile(q_INC_60, 95)
 q_INC_60_lower_90=np.percentile(q_INC_60, 5)
 q_60_mean_val_1=np.average(q_INC_60)
 
-q_INC_50_upper_90=np.percentile(q_INC_50, 95)
-q_INC_50_lower_90=np.percentile(q_INC_50, 5)
+q_INC_70_upper_90=np.percentile(q_INC_70, 95)
+q_INC_70_lower_90=np.percentile(q_INC_70, 5)
 q_70_mean_val_1=np.average(q_INC_70)
 
-q_INC_60_upper_90=np.percentile(q_INC_60, 95)
-q_INC_60_lower_90=np.percentile(q_INC_60, 5)
+q_INC_80_upper_90=np.percentile(q_INC_80, 95)
+q_INC_80_lower_90=np.percentile(q_INC_80, 5)
 q_80_mean_val_1=np.average(q_INC_80)
 
 q_MPE_1 = (abs(q_0_mean_val_1 - injected_q) / injected_q) * 100
