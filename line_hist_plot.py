@@ -265,90 +265,90 @@ def chi_p_8():
     g = open('M40_INC_70.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    Chi_p_6 = [x[52] for x in data ]
-    return Chi_p_6 
+    Chi_p_8 = [x[52] for x in data ]
+    return Chi_p_8 
 
 def chi_p_9():
     data = []
     g = open('M40_INC_80.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    Chi_p_7 = [x[52] for x in data ]
-    return Chi_p_7
+    Chi_p_9 = [x[52] for x in data ]
+    return Chi_p_9
 
 # fuctions for q
 
-def q_1():
+def m1_1():
     data = []
     g = open('M40_INC_0.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_1 = [x[70] for x in data ]
-    return q_1 
+    m1_1 = [x[28] for x in data ]
+    return m1_1 
 
-def q_2():
+def m1_2():
     data = []
     g = open('M40_INC_10.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_2 = [x[70] for x in data ]
-    return q_2     
+    m1_2 = [x[28] for x in data ]
+    return m1_2     
 
-def q_3():
+def m1_3():
     data = []
     g = open('M40_INC_20.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_3 = [x[70] for x in data ]
-    return q_3 
+    m1_3 = [x[28] for x in data ]
+    return m1_3 
 
-def q_4():
+def m1_4():
     data = []
     g = open('M40_INC_30.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_4 = [x[70] for x in data ]
-    return q_4 
+    m1_4 = [x[28] for x in data ]
+    return m1_4 
 
-def q_5():
+def m1_5():
     data = []
     g = open('M40_INC_40.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_5 = [x[70] for x in data ]
-    return q_5    
+    m1_5 = [x[28] for x in data ]
+    return m1_5    
 
-def q_6():
+def m1_6():
     data = []
     g = open('M40_INC_50.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_6 = [x[70] for x in data ]
-    return q_6 
+    m1_6 = [x[28] for x in data ]
+    return m1_6 
 
-def q_7():
+def m1_7():
     data = []
     g = open('M40_INC_60.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_7 = [x[70] for x in data ]
-    return q_7    
+    m1_7 = [x[28] for x in data ]
+    return m1_7    
 
-def q_8():
+def m1_8():
     data = []
     g = open('M40_INC_70.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_6 = [x[70] for x in data ]
-    return q_6 
+    m1_8 = [x[28] for x in data ]
+    return m1_8 
 
-def q_9():
+def m1_9():
     data = []
     g = open('M40_INC_80.0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
-    q_7 = [x[70] for x in data ]
-    return q_7
+    m1_9 = [x[28] for x in data ]
+    return m1_9
 #manually set injection value
 
 q_INC_0 = q_1()
