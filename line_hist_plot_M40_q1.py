@@ -14,7 +14,7 @@ Incliations = [0,10,20,30,40,50,60,70,80]
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
 def chi_p_1_MPE():
     data = []
-    g = open('M40_INC_0.0.txt', 'r')
+    g = open('40M_q1_inc_0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     saved_chi_p_1 = [x[52] for x in data ]
@@ -24,7 +24,7 @@ def chi_p_1_MPE():
 
 def chi_p_1_90PE():
     data = []
-    g = open('M40_INC_0.0.txt', 'r')
+    g = open('40M_q1_inc_0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     saved_chi_p_1 = [x[52] for x in data ]
@@ -35,7 +35,7 @@ def chi_p_1_90PE():
 
 def chi_p_2_MPE():
     data = []
-    f = open('M40_INC_10.0.txt', 'r')
+    f = open('40M_q1_inc_10.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_2 = [x[52] for x in data ]
@@ -45,7 +45,7 @@ def chi_p_2_MPE():
 
 def chi_p_2_90PE():
     data = []
-    f = open('M40_INC_10.0.txt', 'r')
+    f = open('40M_q1_inc_10.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_2 = [x[52] for x in data ]
@@ -56,7 +56,7 @@ def chi_p_2_90PE():
 
 def chi_p_3_MPE():
     data = []
-    f = open('M40_INC_20.0.txt', 'r')
+    f = open('40M_q1_inc_20.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_3 = [x[52] for x in data ]
@@ -66,7 +66,7 @@ def chi_p_3_MPE():
 
 def chi_p_3_90PE():
     data = []
-    f = open('M40_INC_20.0.txt', 'r')
+    f = open('40M_q1_inc_20.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_3 = [x[52] for x in data ]
@@ -77,7 +77,7 @@ def chi_p_3_90PE():
 
 def chi_p_4_MPE():
     data = []
-    f = open('M40_INC_30.0.txt', 'r')
+    f = open('40M_q1_inc_30.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_4 = [x[52] for x in data ]
@@ -87,7 +87,7 @@ def chi_p_4_MPE():
 
 def chi_p_4_90PE():
     data = []
-    f = open('M40_INC_30.0.txt', 'r')
+    f = open('40M_q1_inc_30.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_4 = [x[52] for x in data ]
@@ -98,7 +98,7 @@ def chi_p_4_90PE():
 
 def chi_p_5_MPE():
     data = []
-    f = open('M40_INC_40.0.txt', 'r')
+    f = open('40M_q1_inc_40.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_5 = [x[52] for x in data ]
@@ -108,7 +108,7 @@ def chi_p_5_MPE():
 
 def chi_p_5_90PE():
     data = []
-    f = open('M40_INC_40.0.txt', 'r')
+    f = open('40M_q1_inc_40.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_5 = [x[52] for x in data ]
@@ -119,7 +119,7 @@ def chi_p_5_90PE():
 
 def chi_p_6_MPE():
     data = []
-    f = open('M40_INC_50.0.txt', 'r')
+    f = open('40M_q1_inc_50.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_6 = [x[52] for x in data ]
@@ -129,7 +129,7 @@ def chi_p_6_MPE():
 
 def chi_p_6_90PE():
     data = []
-    f = open('M40_INC_50.0.txt', 'r')
+    f = open('40M_q1_inc_50.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_6 = [x[52] for x in data ]
@@ -140,7 +140,7 @@ def chi_p_6_90PE():
 
 def chi_p_7_MPE():
     data = []
-    f = open('M40_INC_60.0.txt', 'r')
+    f = open('40M_q1_inc_60.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_7 = [x[52] for x in data ]
@@ -150,7 +150,7 @@ def chi_p_7_MPE():
 
 def chi_p_7_90PE():
     data = []
-    f = open('M40_INC_60.0.txt', 'r')
+    f = open('40M_q1_inc_60.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_7 = [x[52] for x in data ]
@@ -161,7 +161,7 @@ def chi_p_7_90PE():
 
 def chi_p_8_MPE():
     data = []
-    f = open('M40_INC_70.0.txt', 'r')
+    f = open('40M_q1_inc_70.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_8 = [x[52] for x in data ]
@@ -171,7 +171,7 @@ def chi_p_8_MPE():
 
 def chi_p_8_90PE():
     data = []
-    f = open('M40_INC_70.0.txt', 'r')
+    f = open('40M_q1_inc_70.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_8 = [x[52] for x in data ]
@@ -182,7 +182,7 @@ def chi_p_8_90PE():
 
 def chi_p_9_MPE():
     data = []
-    f = open('M40_INC_80.0.txt', 'r')
+    f = open('40M_q1_inc_80.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_9 = [x[52] for x in data ]
@@ -192,7 +192,7 @@ def chi_p_9_MPE():
 
 def chi_p_9_90PE():
     data = []
-    f = open('M40_INC_80.0.txt', 'r')
+    f = open('40M_q1_inc_80.txt', 'r')
     for line in f:
         data.append([float(x) for x in line.split()])
     saved_chi_p_9 = [x[52] for x in data ]
@@ -207,7 +207,7 @@ inj_v=0.75
 
 def chi_p_1():
     data = []
-    g = open('M40_INC_0.0.txt', 'r')
+    g = open('40M_q1_inc_0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_1 = [x[52] for x in data ]
@@ -215,7 +215,7 @@ def chi_p_1():
 
 def chi_p_2():
     data = []
-    g = open('M40_INC_10.0.txt', 'r')
+    g = open('40M_q1_inc_10.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_2 = [x[52] for x in data ]
@@ -223,7 +223,7 @@ def chi_p_2():
 
 def chi_p_3():
     data = []
-    g = open('M40_INC_20.0.txt', 'r')
+    g = open('40M_q1_inc_20.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_3 = [x[52] for x in data ]
@@ -231,7 +231,7 @@ def chi_p_3():
 
 def chi_p_4():
     data = []
-    g = open('M40_INC_30.0.txt', 'r')
+    g = open('40M_q1_inc_30.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_4 = [x[52] for x in data ]
@@ -239,7 +239,7 @@ def chi_p_4():
 
 def chi_p_5():
     data = []
-    g = open('M40_INC_40.0.txt', 'r')
+    g = open('40M_q1_inc_40.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_5 = [x[52] for x in data ]
@@ -247,7 +247,7 @@ def chi_p_5():
 
 def chi_p_6():
     data = []
-    g = open('M40_INC_50.0.txt', 'r')
+    g = open('40M_q1_inc_50.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_6 = [x[52] for x in data ]
@@ -255,7 +255,7 @@ def chi_p_6():
 
 def chi_p_7():
     data = []
-    g = open('M40_INC_60.0.txt', 'r')
+    g = open('40M_q1_inc_60.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_7 = [x[52] for x in data ]
@@ -263,7 +263,7 @@ def chi_p_7():
 
 def chi_p_8():
     data = []
-    g = open('M40_INC_70.0.txt', 'r')
+    g = open('40M_q1_inc_70.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_8 = [x[52] for x in data ]
@@ -271,7 +271,7 @@ def chi_p_8():
 
 def chi_p_9():
     data = []
-    g = open('M40_INC_80.0.txt', 'r')
+    g = open('40M_q1_inc_80.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     Chi_p_9 = [x[52] for x in data ]
@@ -281,7 +281,7 @@ def chi_p_9():
 
 def m1_1():
     data = []
-    g = open('M40_INC_0.0.txt', 'r')
+    g = open('40M_q1_inc_0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_1 = [x[28] for x in data ]
@@ -289,7 +289,7 @@ def m1_1():
 
 def m1_2():
     data = []
-    g = open('M40_INC_10.0.txt', 'r')
+    g = open('40M_q1_inc_10.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_2 = [x[28] for x in data ]
@@ -297,7 +297,7 @@ def m1_2():
 
 def m1_3():
     data = []
-    g = open('M40_INC_20.0.txt', 'r')
+    g = open('40M_q1_inc_20.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_3 = [x[28] for x in data ]
@@ -305,7 +305,7 @@ def m1_3():
 
 def m1_4():
     data = []
-    g = open('M40_INC_30.0.txt', 'r')
+    g = open('40M_q1_inc_30.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_4 = [x[28] for x in data ]
@@ -313,7 +313,7 @@ def m1_4():
 
 def m1_5():
     data = []
-    g = open('M40_INC_40.0.txt', 'r')
+    g = open('40M_q1_inc_40.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_5 = [x[28] for x in data ]
@@ -321,7 +321,7 @@ def m1_5():
 
 def m1_6():
     data = []
-    g = open('M40_INC_50.0.txt', 'r')
+    g = open('40M_q1_inc_50.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_6 = [x[28] for x in data ]
@@ -329,7 +329,7 @@ def m1_6():
 
 def m1_7():
     data = []
-    g = open('M40_INC_60.0.txt', 'r')
+    g = open('40M_q1_inc_60.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_7 = [x[28] for x in data ]
@@ -337,7 +337,7 @@ def m1_7():
 
 def m1_8():
     data = []
-    g = open('M40_INC_70.0.txt', 'r')
+    g = open('40M_q1_inc_70.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_8 = [x[28] for x in data ]
@@ -345,7 +345,7 @@ def m1_8():
 
 def m1_9():
     data = []
-    g = open('M40_INC_80.0.txt', 'r')
+    g = open('40M_q1_inc_80.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m1_9 = [x[28] for x in data ]
@@ -355,7 +355,7 @@ def m1_9():
 
 def m2_1():
     data = []
-    g = open('M40_INC_0.0.txt', 'r')
+    g = open('40M_q1_inc_0.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_1 = [x[31] for x in data ]
@@ -363,7 +363,7 @@ def m2_1():
 
 def m2_2():
     data = []
-    g = open('M40_INC_10.0.txt', 'r')
+    g = open('40M_q1_inc_10.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_2 = [x[31] for x in data ]
@@ -371,7 +371,7 @@ def m2_2():
 
 def m2_3():
     data = []
-    g = open('M40_INC_20.0.txt', 'r')
+    g = open('40M_q1_inc_20.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_3 = [x[31] for x in data ]
@@ -379,7 +379,7 @@ def m2_3():
 
 def m2_4():
     data = []
-    g = open('M40_INC_30.0.txt', 'r')
+    g = open('40M_q1_inc_30.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_4 = [x[31] for x in data ]
@@ -387,7 +387,7 @@ def m2_4():
 
 def m2_5():
     data = []
-    g = open('M40_INC_40.0.txt', 'r')
+    g = open('40M_q1_inc_40.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_5 = [x[31] for x in data ]
@@ -395,7 +395,7 @@ def m2_5():
 
 def m2_6():
     data = []
-    g = open('M40_INC_50.0.txt', 'r')
+    g = open('40M_q1_inc_50.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_6 = [x[31] for x in data ]
@@ -403,7 +403,7 @@ def m2_6():
 
 def m2_7():
     data = []
-    g = open('M40_INC_60.0.txt', 'r')
+    g = open('40M_q1_inc_60.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_7 = [x[31] for x in data ]
@@ -411,7 +411,7 @@ def m2_7():
 
 def m2_8():
     data = []
-    g = open('M40_INC_70.0.txt', 'r')
+    g = open('40M_q1_inc_70.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_8 = [x[31] for x in data ]
@@ -419,7 +419,7 @@ def m2_8():
 
 def m2_9():
     data = []
-    g = open('M40_INC_80.0.txt', 'r')
+    g = open('40M_q1_inc_80.txt', 'r')
     for line in g:
         data.append([float(x) for x in line.split()])
     m2_9 = [x[31] for x in data ]
@@ -557,4 +557,4 @@ fig.set_figwidth(15)
 # Set common labels
 
 
-plt.savefig("Inc_his5.png")
+plt.savefig("Inc_his_q1_1.png")
