@@ -563,14 +563,14 @@ fig = plt.figure()
 ax1 = fig.add_subplot(321)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
 ax1.legend(loc='lower right', fontsize=10.5)
-ax1.axis([-10, 90, 0, 100])
+ax1.axis([-10, 90, 0, 80])
 ax1.set_title('Inclination_scatter_40M_q1_s1x=0.75')
 ax1.set_ylabel('Precentage error chi_p (%)', fontsize=12)
 ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 ax2 = fig.add_subplot(322)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
-ax2.axis([-10, 90, 0, 100])
+ax2.axis([-10, 90, 20, 80])
 ax2.set_title('Inclination_line_40M_q1_s1x=0.75')
 ax2.set_ylabel('Precentage error chi_p (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
@@ -618,15 +618,15 @@ ax4.legend(loc='upper right', fontsize=10.5)
 ax5 = fig.add_subplot(325)
 ax5.errorbar(x=Incliations, y=b, yerr=be, fmt='o', color='g', label = 'Incliation ranges')
 ax5.legend(loc='lower right', fontsize=10.5)
-ax5.axis([-10, 90, -50, 50])
+ax5.axis([-10, 90, 0, 120])
 ax5.set_title('Inclination_scatter_q_40M_q4_s1x=0.75')
 ax5.set_ylabel('Precentage error q (%)', fontsize=12)
 ax5.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 
 fig.tight_layout()
-fig.set_figheight(10)
-fig.set_figwidth(15)
+fig.set_figheight(15)
+fig.set_figwidth(20)
 
 
 
@@ -634,4 +634,4 @@ fig.set_figwidth(15)
 # Set common labels
 
 
-plt.savefig("Inc_his_q1_5.png")
+plt.savefig("Inc_his_q1_6.png")
