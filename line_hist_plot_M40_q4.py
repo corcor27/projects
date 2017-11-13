@@ -493,24 +493,93 @@ run9PE = chi_p_9_90PE()
 a = [run1MPE,run2MPE,run3MPE,run4MPE,run5MPE,run6MPE,run7MPE,run8MPE,run9MPE]
 ae = [run1PE,run2PE,run3PE,run4PE,run5PE,run6PE,run7PE,run8PE,run9PE]
 
+#create percentiles for q error plot
+
+q_INC_0_upper_90=np.percentile(q_INC_0, 95)
+q_INC_0_lower_90=np.percentile(q_INC_0, 5)
+q_0_mean_val_1=np.average(q_INC_0)
+
+q_INC_10_upper_90=np.percentile(q_INC_10, 95)
+q_INC_10_lower_90=np.percentile(q_INC_10, 5)
+q_10_mean_val_1=np.average(q_INC_10)
+
+q_INC_20_upper_90=np.percentile(q_INC_20, 95)
+q_INC_20_lower_90=np.percentile(q_INC_20, 5)
+q_20_mean_val_1=np.average(q_INC_20)
+
+q_INC_30_upper_90=np.percentile(q_INC_30, 95)
+INC_30_lower_90=np.percentile(q_INC_30, 5)
+q_30_mean_val_1=np.average(q_INC_30)
+
+q_INC_40_upper_90=np.percentile(q_INC_40, 95)
+q_INC_40_lower_90=np.percentile(q_INC_40, 5)
+q_40_mean_val_1=np.average(q_INC_40)
+
+q_INC_50_upper_90=np.percentile(q_INC_50, 95)
+q_INC_50_lower_90=np.percentile(q_INC_50, 5)
+q_50_mean_val_1=np.average(q_INC_50)
+
+q_INC_60_upper_90=np.percentile(q_INC_60, 95)
+q_INC_60_lower_90=np.percentile(q_INC_60, 5)
+q_60_mean_val_1=np.average(q_INC_60)
+
+q_INC_50_upper_90=np.percentile(q_INC_50, 95)
+q_INC_50_lower_90=np.percentile(q_INC_50, 5)
+q_70_mean_val_1=np.average(q_INC_70)
+
+q_INC_60_upper_90=np.percentile(q_INC_60, 95)
+q_INC_60_lower_90=np.percentile(q_INC_60, 5)
+q_80_mean_val_1=np.average(q_INC_80)
+
+q_MPE_1 = (abs(q_0_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_1 = (abs(q_INC_0_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_2 = (abs(q_10_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_2 = (abs(q_INC_10_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_3 = (abs(q_20_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_3 = (abs(q_INC_20_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_4 = (abs(q_30_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_4 = (abs(q_INC_30_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_5 = (abs(q_40_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_5 = (abs(q_INC_40_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_6 = (abs(q_50_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_6 = (abs(q_INC_50_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_7 = (abs(q_60_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_7 = (abs(q_INC_60_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_8 = (abs(q_70_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_8 = (abs(q_INC_70_upper_90 - injected_q) / injected_q) * 100
+
+q_MPE_9 = (abs(q_80_mean_val_1 - injected_q) / injected_q) * 100
+q_PE_9 = (abs(q_INC_80_upper_90 - injected_q) / injected_q) * 100
+
+b = [q_MPE_1,q_MPE_2,q_MPE_3,q_MPE_4,q_MPE_5,q_MPE_6,q_MPE_7,q_MPE_8,q_MPE_9]
+be = [q_PE_1,q_PE_2,q_PE_3,q_PE_4,q_PE_5,q_PE_6,q_PE_7,q_PE_8,q_PE_9]
+
+
 fig = plt.figure()
 
-ax1 = fig.add_subplot(221)
+ax1 = fig.add_subplot(321)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
 ax1.legend(loc='lower right', fontsize=10.5)
 ax1.axis([-10, 90, -15, 25])
-ax1.set_title('Inclination_scatter_40M_q4_s1x=0.75')
+ax1.set_title('Inclination_scatter_chi_p_40M_q4_s1x=0.75')
 ax1.set_ylabel('Precentage error chi_p (%)', fontsize=12)
 ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
 
-ax2 = fig.add_subplot(222)
+ax2 = fig.add_subplot(322)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
 ax2.axis([-10, 90, 0, 9])
 ax2.set_title('Inclination_line_40M_q4_s1x=0.75')
 ax2.set_ylabel('Precentage error chi_p (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
 
-ax3 = fig.add_subplot(223)
+ax3 = fig.add_subplot(323)
 ax3.hist(chi_p_INC_0,50, facecolor='m', normed=True, label = '0 deg')
 ax3.hist(chi_p_INC_10,50, facecolor='g', normed=True, label = '10 deg')
 ax3.hist(chi_p_INC_20,50, facecolor='b', normed=True, label = '20 deg')
@@ -532,7 +601,7 @@ ax3.set_ylabel('probability density')
 ax3.legend(loc='upper left', fontsize=10.5)
 
 
-ax4 = fig.add_subplot(224)
+ax4 = fig.add_subplot(324)
 ax4.hist(q_INC_0,50, facecolor='m', normed=True, label = '0 deg')
 ax4.hist(q_INC_10,50, facecolor='g', normed=True, label = '10 deg')
 ax4.hist(q_INC_20,50, facecolor='b', normed=True, label = '20 deg')
@@ -548,6 +617,13 @@ ax4.set_title('q_histogram_40M_q4_s1x=0.75')
 ax4.set_ylabel('probability density')
 ax4.legend(loc='upper left', fontsize=10.5)
 
+ax5 = fig.add_subplot(325)
+ax5.errorbar(x=Incliations, y=b, yerr=be, fmt='o', color='g', label = 'Incliation ranges')
+ax5.legend(loc='lower right', fontsize=10.5)
+ax5.axis([-10, 90, -100, 100])
+ax5.set_title('Inclination_scatter_q_40M_q4_s1x=0.75')
+ax5.set_ylabel('Precentage error q (%)', fontsize=12)
+ax5.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 fig.tight_layout()
 fig.set_figheight(10)
@@ -559,4 +635,4 @@ fig.set_figwidth(15)
 # Set common labels
 
 
-plt.savefig("Inc_his6.png")
+plt.savefig("Inc_his7.png")
