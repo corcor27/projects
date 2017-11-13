@@ -354,7 +354,7 @@ ax2.set_title('Inclination_line')
 ax2.set_ylabel('Precentage error chi_p (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
 
-ax3 = fig.add_subplot(222)
+ax3 = fig.add_subplot(223)
 ax3.hist(chi_p_INC_0,50, facecolor='m', normed=True, label = '0 deg')
 ax3.hist(chi_p_INC_10,50, facecolor='g', normed=True, label = '10 deg')
 ax3.hist(chi_p_INC_20,50, facecolor='b', normed=True, label = '20 deg')
