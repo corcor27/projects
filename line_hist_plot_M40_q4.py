@@ -635,4 +635,4 @@ fig.set_figwidth(20)
 # Set common labels
 
 
-plt.savefig("Inc_his7.png")
+plt.savefig("Inc_his8.png")
