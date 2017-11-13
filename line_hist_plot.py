@@ -276,7 +276,7 @@ def chi_p_9():
     Chi_p_9 = [x[52] for x in data ]
     return Chi_p_9
 
-# fuctions for q
+# fuctions for m1
 
 def m1_1():
     data = []
@@ -349,17 +349,122 @@ def m1_9():
         data.append([float(x) for x in line.split()])
     m1_9 = [x[28] for x in data ]
     return m1_9
+
+#functions for m2
+
+def m2_1():
+    data = []
+    g = open('M40_INC_0.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_1 = [x[31] for x in data ]
+    return m2_1 
+
+def m2_2():
+    data = []
+    g = open('M40_INC_10.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_2 = [x[31] for x in data ]
+    return m2_2     
+
+def m2_3():
+    data = []
+    g = open('M40_INC_20.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_3 = [x[31] for x in data ]
+    return m2_3 
+
+def m2_4():
+    data = []
+    g = open('M40_INC_30.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_4 = [x[31] for x in data ]
+    return m2_4 
+
+def m2_5():
+    data = []
+    g = open('M40_INC_40.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_5 = [x[31] for x in data ]
+    return m2_5    
+
+def m2_6():
+    data = []
+    g = open('M40_INC_50.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_6 = [x[31] for x in data ]
+    return m2_6 
+
+def m2_7():
+    data = []
+    g = open('M40_INC_60.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_7 = [x[31] for x in data ]
+    return m2_7    
+
+def m2_8():
+    data = []
+    g = open('M40_INC_70.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_8 = [x[31] for x in data ]
+    return m2_8 
+
+def m2_9():
+    data = []
+    g = open('M40_INC_80.0.txt', 'r')
+    for line in g:
+        data.append([float(x) for x in line.split()])
+    m2_9 = [x[31] for x in data ]
+    return m2_9
 #manually set injection value
 
-q_INC_0 = q_1()
-q_INC_10 = q_2()
-q_INC_20 = q_3()
-q_INC_30 = q_4()
-q_INC_40 = q_5()
-q_INC_50 = q_6()
-q_INC_60 = q_7()
-q_INC_70 = q_8()
-q_INC_80 = q_9()
+chi_p_INC_0 = chi_p_1()
+chi_p_INC_10 = chi_p_2()
+chi_p_INC_20 = chi_p_3()
+chi_p_INC_30 = chi_p_4()
+chi_p_INC_40 = chi_p_5()
+chi_p_INC_50 = chi_p_6()
+chi_p_INC_60 = chi_p_7()
+chi_p_INC_70 = chi_p_8()
+chi_p_INC_80 = chi_p_9()
+
+
+m1_INC_0 = m1_1()
+m1_INC_10 = m1_2()
+m1_INC_20 = m1_3()
+m1_INC_30 = m1_4()
+m1_INC_40 = m1_5()
+m1_INC_50 = m1_6()
+m1_INC_60 = m1_7()
+m1_INC_70 = m1_8()
+m1_INC_80 = m1_9()
+
+m2_INC_0 = m2_1()
+m2_INC_10 = m2_2()
+m2_INC_20 = m2_3()
+m2_INC_30 = m2_4()
+m2_INC_40 = m2_5()
+m2_INC_50 = m2_6()
+m2_INC_60 = m2_7()
+m2_INC_70 = m2_8()
+m2_INC_80 = m2_9()
+
+q_INC_0 = m1_INC_0 / m2_INC_0
+q_INC_10 = m1_INC_10 / m2_INC_10
+q_INC_20 = m1_INC_20 / m2_INC_20
+q_INC_30 = m1_INC_30 / m2_INC_30
+q_INC_40 = m1_INC_40 / m2_INC_40
+q_INC_50 = m1_INC_50 / m2_INC_50
+q_INC_60 = m1_INC_60 / m2_INC_60
+q_INC_70 = m1_INC_70 / m2_INC_70
+q_INC_80 = m1_INC_80 / m2_INC_80
 
 # recovered values from functions 
 
@@ -435,7 +540,7 @@ ax4.hist(q_INC_50,50, facecolor='grey', normed=True, label = '50 deg')
 ax4.hist(q_INC_60,50, facecolor='lightgreen', normed=True, label = '60 deg')
 ax4.hist(q_INC_70,50, facecolor='skyblue', normed=True, label = '70 deg')
 ax4.hist(q_INC_80,50, facecolor='lightcoral', normed=True, label = '80 deg')
-ax4.set_xlabel('chi_p')
+ax4.set_xlabel('q')
 ax4.axvline(x=injected_q,linewidth=2, color='r')
 ax4.set_ylabel('probability density')
 ax4.legend(loc='upper left', fontsize=10.5)
@@ -451,4 +556,4 @@ fig.set_figwidth(15)
 # Set common labels
 
 
-plt.savefig("Inc_his4.png")
+plt.savefig("Inc_his5.png")
