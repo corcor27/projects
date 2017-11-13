@@ -456,15 +456,15 @@ m2_INC_60 = m2_7()
 m2_INC_70 = m2_8()
 m2_INC_80 = m2_9()
 
-q_INC_0 = m1_INC_0 / m2_INC_0
-q_INC_10 = m1_INC_10 / m2_INC_10
-q_INC_20 = m1_INC_20 / m2_INC_20
-q_INC_30 = m1_INC_30 / m2_INC_30
-q_INC_40 = m1_INC_40 / m2_INC_40
-q_INC_50 = m1_INC_50 / m2_INC_50
-q_INC_60 = m1_INC_60 / m2_INC_60
-q_INC_70 = m1_INC_70 / m2_INC_70
-q_INC_80 = m1_INC_80 / m2_INC_80
+q_INC_0 = map(truediv, m1_INC_0, m2_INC_0)
+q_INC_10 = map(truediv, m1_INC_10, m2_INC_10)
+q_INC_20 = map(truediv, m1_INC_20, m2_INC_20)
+q_INC_30 = map(truediv, m1_INC_30, m2_INC_30)
+q_INC_40 = map(truediv, m1_INC_40, m2_INC_40)
+q_INC_50 = map(truediv, m1_INC_50, m2_INC_50)
+q_INC_60 = map(truediv, m1_INC_60, m2_INC_60)
+q_INC_70 = map(truediv, m1_INC_70, m2_INC_70)
+q_INC_80 = map(truediv, m1_INC_80, m2_INC_80)
 
 # recovered values from functions 
 
