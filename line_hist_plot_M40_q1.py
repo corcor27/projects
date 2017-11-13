@@ -498,14 +498,14 @@ fig = plt.figure()
 ax1 = fig.add_subplot(221)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
 ax1.legend(loc='lower right', fontsize=10.5)
-ax1.axis([-10, 90, -15, 25])
+ax1.axis([-10, 90, 0, 100])
 ax1.set_title('Inclination_scatter')
 ax1.set_ylabel('Precentage error chi_p (%)', fontsize=12)
 ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 ax2 = fig.add_subplot(222)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
-ax2.axis([-10, 90, 0, 9])
+ax2.axis([-10, 90, 0, 100])
 ax2.set_title('Inclination_line')
 ax2.set_ylabel('Precentage error chi_p (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
@@ -529,7 +529,7 @@ ax3.axis([0, 1.5, 0, 3])
 #plt.axvline(x=pycbc_upper_90,linewidth=2,linestyle='dashed',color='k')
 ax3.axvline(x=inj_v,linewidth=2, color='r')
 ax3.set_ylabel('probability density')
-ax3.legend(loc='upper left', fontsize=10.5)
+ax3.legend(loc='upper right', fontsize=10.5)
 
 
 ax4 = fig.add_subplot(224)
@@ -545,7 +545,7 @@ ax4.hist(q_INC_80,50, facecolor='lightcoral', normed=True, label = '80 deg')
 ax4.set_xlabel('q')
 ax4.axvline(x=injected_q,linewidth=2, color='r')
 ax4.set_ylabel('probability density')
-ax4.axis([1, 3, 0, 3.5])
+ax4.axis([0.5, 3, 0, 3.5])
 ax4.legend(loc='upper right', fontsize=10.5)
 
 
@@ -559,4 +559,4 @@ fig.set_figwidth(15)
 # Set common labels
 
 
-plt.savefig("Inc_his_q1_2.png")
+plt.savefig("Inc_his_q1_3.png")
