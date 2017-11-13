@@ -646,7 +646,7 @@ Mc_20_mean_val_1=np.average(Mc_20)
 
 Mc_INC_30_upper_90=np.percentile(Mc_30, 95)
 Mc_INC_30_lower_90=np.percentile(Mc_30, 5)
-Mc_q_30_mean_val_1=np.average(Mc_30)
+Mc_30_mean_val_1=np.average(Mc_30)
 
 Mc_INC_40_upper_90=np.percentile(Mc_40, 95)
 Mc_INC_40_lower_90=np.percentile(Mc_40, 5)
