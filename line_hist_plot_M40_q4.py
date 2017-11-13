@@ -9,6 +9,9 @@ print "Initialising..."
 
 injected_value=0.75
 injected_q = 4
+inj_v=0.75
+injected_Mc = 13.32085
+injected_Mc_q = 0.3002811085
 Incliations = [0,10,20,30,40,50,60,70,80]
 #manually set injection value
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
@@ -201,7 +204,7 @@ def chi_p_9_90PE():
     PE_9 = (abs(upper_90_9 - injected_value) / injected_value) * 100
     return PE_9
 
-inj_v=0.75
+
 
 # functions for chi_p histogram
 
@@ -457,6 +460,62 @@ m2_INC_60 = m2_7()
 m2_INC_70 = m2_8()
 m2_INC_80 = m2_9()
 
+
+#create Mc value
+#first line m1 mulitply by m2
+
+m1m2_INC_0 = np.muiltiply(m1_INC_0, m2_INC_0)
+m1m2_INC_10 = np.muiltiply(m1_INC_10, m2_INC_10)
+m1m2_INC_20 = np.muiltiply(m1_INC_20, m2_INC_20)
+m1m2_INC_30 = np.muiltiply(m1_INC_30, m2_INC_30)
+m1m2_INC_40 = np.muiltiply(m1_INC_40, m2_INC_40)
+m1m2_INC_50 = np.muiltiply(m1_INC_50, m2_INC_50)
+m1m2_INC_60 = np.muiltiply(m1_INC_60, m2_INC_60)
+m1m2_INC_70 = np.muiltiply(m1_INC_70, m2_INC_70)
+m1m2_INC_80 = np.muiltiply(m1_INC_80, m2_INC_80)
+
+m1_m2_INC_0 = np.add(m1_INC_0, m2_INC_0)
+m1_m2_INC_10 = np.add(m1_INC_10, m2_INC_10)
+m1_m2_INC_20 = np.add(m1_INC_20, m2_INC_20)
+m1_m2_INC_30 = np.add(m1_INC_30, m2_INC_30)
+m1_m2_INC_40 = np.add(m1_INC_40, m2_INC_40)
+m1_m2_INC_50 = np.add(m1_INC_50, m2_INC_50)
+m1_m2_INC_60 = np.add(m1_INC_60, m2_INC_60)
+m1_m2_INC_70 = np.add(m1_INC_70, m2_INC_70)
+m1_m2_INC_80 = np.add(m1_INC_80, m2_INC_80)
+
+TM0 = list(np.array(m1m2_INC_0)**0.6)
+TM10 = list(np.array(m1m2_INC_10)**0.6)
+TM20 = list(np.array(m1m2_INC_20)**0.6)
+TM30 = list(np.array(m1m2_INC_30)**0.6)
+TM40 = list(np.array(m1m2_INC_40)**0.6)
+TM50 = list(np.array(m1m2_INC_50)**0.6)
+TM60 = list(np.array(m1m2_INC_60)**0.6)
+TM70 = list(np.array(m1m2_INC_70)**0.6)
+TM80 = list(np.array(m1m2_INC_80)**0.6)
+
+LM0 = list(np.array(m1_m2_INC_0)**0.2)
+LM10 = list(np.array(m1_m2_INC_10)**0.2)
+LM20 = list(np.array(m1_m2_INC_20)**0.2)
+LM30 = list(np.array(m1_m2_INC_30)**0.2)
+LM40 = list(np.array(m1_m2_INC_40)**0.2)
+LM50 = list(np.array(m1_m2_INC_50)**0.2)
+LM60 = list(np.array(m1_m2_INC_60)**0.2)
+LM70 = list(np.array(m1_m2_INC_70)**0.2)
+LM80 = list(np.array(m1_m2_INC_80)**0.2)
+
+Mc_0 = map(truediv, TM0, LM0)
+Mc_10 = map(truediv, TM10, LM10)
+Mc_20 = map(truediv, TM20, LM20)
+Mc_30 = map(truediv, TM30, LM30)
+Mc_40 = map(truediv, TM40, LM40)
+Mc_50 = map(truediv, TM50, LM50)
+Mc_60 = map(truediv, TM60, LM60)
+Mc_70 = map(truediv, TM70, LM70)
+Mc_80 = map(truediv, TM80, LM80)
+
+# create q
+
 q_INC_0 = map(truediv, m1_INC_0, m2_INC_0)
 q_INC_10 = map(truediv, m1_INC_10, m2_INC_10)
 q_INC_20 = map(truediv, m1_INC_20, m2_INC_20)
@@ -466,6 +525,16 @@ q_INC_50 = map(truediv, m1_INC_50, m2_INC_50)
 q_INC_60 = map(truediv, m1_INC_60, m2_INC_60)
 q_INC_70 = map(truediv, m1_INC_70, m2_INC_70)
 q_INC_80 = map(truediv, m1_INC_80, m2_INC_80)
+
+Mc_q_0 = map(truediv, q_INC_0, Mc_0)
+Mc_q_10 = map(truediv, q_INC_0, Mc_0)
+Mc_q_20 = map(truediv, q_INC_0, Mc_0)
+Mc_q_30 = map(truediv, q_INC_0, Mc_0)
+Mc_q_40 = map(truediv, q_INC_0, Mc_0)
+Mc_q_50 = map(truediv, q_INC_0, Mc_0)
+Mc_q_60 = map(truediv, q_INC_0, Mc_0)
+Mc_q_70 = map(truediv, q_INC_0, Mc_0)
+Mc_q_80 = map(truediv, q_INC_0, Mc_0)
 
 # recovered values from functions 
 
@@ -508,7 +577,7 @@ q_INC_20_lower_90=np.percentile(q_INC_20, 5)
 q_20_mean_val_1=np.average(q_INC_20)
 
 q_INC_30_upper_90=np.percentile(q_INC_30, 95)
-INC_30_lower_90=np.percentile(q_INC_30, 5)
+q_INC_30_lower_90=np.percentile(q_INC_30, 5)
 q_30_mean_val_1=np.average(q_INC_30)
 
 q_INC_40_upper_90=np.percentile(q_INC_40, 95)
@@ -560,6 +629,142 @@ q_PE_9 = (abs(q_INC_80_upper_90 - injected_q) / injected_q) * 100
 
 b = [q_MPE_1,q_MPE_2,q_MPE_3,q_MPE_4,q_MPE_5,q_MPE_6,q_MPE_7,q_MPE_8,q_MPE_9]
 be = [q_PE_1,q_PE_2,q_PE_3,q_PE_4,q_PE_5,q_PE_6,q_PE_7,q_PE_8,q_PE_9]
+
+#create Mc 
+
+Mc_INC_0_upper_90=np.percentile(Mc_0, 95)
+Mc_INC_0_lower_90=np.percentile(Mc_0, 5)
+Mc_0_mean_val_1=np.average(Mc_0)
+
+Mc_INC_10_upper_90=np.percentile(Mc_10, 95)
+MC_INC_10_lower_90=np.percentile(Mc_10, 5)
+Mc_10_mean_val_1=np.average(Mc_10)
+
+Mc_INC_20_upper_90=np.percentile(Mc_20, 95)
+Mc_INC_20_lower_90=np.percentile(Mc_20, 5)
+Mc_20_mean_val_1=np.average(Mc_20)
+
+Mc_INC_30_upper_90=np.percentile(Mc_30, 95)
+Mc_INC_30_lower_90=np.percentile(Mc_30, 5)
+Mc_q_30_mean_val_1=np.average(Mc_30)
+
+Mc_INC_40_upper_90=np.percentile(Mc_40, 95)
+Mc_INC_40_lower_90=np.percentile(Mc_40, 5)
+Mc_40_mean_val_1=np.average(Mc_40)
+
+Mc_INC_50_upper_90=np.percentile(Mc_50, 95)
+Mc_INC_50_lower_90=np.percentile(Mc_50, 5)
+Mc_50_mean_val_1=np.average(Mc_50)
+
+Mc_INC_60_upper_90=np.percentile(Mc_60, 95)
+Mc_INC_60_lower_90=np.percentile(Mc_60, 5)
+Mc_60_mean_val_1=np.average(Mc_60)
+
+Mc_INC_70_upper_90=np.percentile(Mc_70, 95)
+Mc_INC_70_lower_90=np.percentile(Mc_70, 5)
+Mc_70_mean_val_1=np.average(Mc_70)
+
+Mc_INC_80_upper_90=np.percentile(Mc_80, 95)
+Mc_INC_80_lower_90=np.percentile(Mc_80, 5)
+Mc_80_mean_val_1=np.average(Mc_80)
+
+Mc_MPE_1 = (abs(Mc_0_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_1 = (abs(Mc_INC_0_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_2 = (abs(Mc_10_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_2 = (abs(Mc_INC_10_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_3 = (abs(Mc_20_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_3 = (abs(Mc_INC_20_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_4 = (abs(Mc_30_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_4 = (abs(Mc_INC_30_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_5 = (abs(Mc_40_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_5 = (abs(Mc_INC_40_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_6 = (abs(Mc_50_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_6 = (abs(Mc_INC_50_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_7 = (abs(Mc_60_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_7 = (abs(Mc_INC_60_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_8 = (abs(Mc_70_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_8 = (abs(Mc_INC_70_upper_90 - injected_Mc) / injected_Mc) * 100
+
+Mc_MPE_9 = (abs(Mc_80_mean_val_1 - injected_Mc) / injected_Mc) * 100
+Mc_PE_9 = (abs(Mc_INC_80_upper_90 - injected_Mc) / injected_Mc) * 100
+
+c = [Mc_MPE_1,Mc_MPE_2,Mc_MPE_3,Mc_MPE_4,Mc_MPE_5,Mc_MPE_6,Mc_MPE_7,Mc_MPE_8,Mc_MPE_9]
+ce = [Mc_PE_1,Mc_PE_2,Mc_PE_3,Mc_PE_4,Mc_PE_5,Mc_PE_6,Mc_PE_7,Mc_PE_8,Mc_PE_9]
+
+#create q/Mc
+
+Mc_q_INC_0_upper_90=np.percentile(Mc_q_0, 95)
+Mc_q_INC_0_lower_90=np.percentile(Mc_q_0, 5)
+Mc_q_0_mean_val_1=np.average(Mc_q_0)
+
+Mc_q_INC_10_upper_90=np.percentile(Mc_q_10, 95)
+MC_q_INC_10_lower_90=np.percentile(Mc_q_10, 5)
+Mc_q_10_mean_val_1=np.average(Mc_q_10)
+
+Mc_q_INC_20_upper_90=np.percentile(Mc_q_20, 95)
+Mc_q_INC_20_lower_90=np.percentile(Mc_q_20, 5)
+Mc_q_20_mean_val_1=np.average(Mc_q_20)
+
+Mc_q_INC_30_upper_90=np.percentile(Mc_q_30, 95)
+Mc_q_INC_30_lower_90=np.percentile(Mc_q_30, 5)
+Mc_q_30_mean_val_1=np.average(Mc_q_30)
+
+Mc_q_INC_40_upper_90=np.percentile(Mc_q_40, 95)
+Mc_q_INC_40_lower_90=np.percentile(Mc_q_40, 5)
+Mc_q_40_mean_val_1=np.average(Mc_q_40)
+
+Mc_q_INC_50_upper_90=np.percentile(Mc_q_50, 95)
+Mc_q_INC_50_lower_90=np.percentile(Mc_q_50, 5)
+Mc_q_50_mean_val_1=np.average(Mc_q_50)
+
+Mc_q_INC_60_upper_90=np.percentile(Mc_q_60, 95)
+Mc_q_INC_60_lower_90=np.percentile(Mc_q_60, 5)
+Mc_q_60_mean_val_1=np.average(Mc_q_60)
+
+Mc_q_INC_70_upper_90=np.percentile(Mc_q_70, 95)
+Mc_q_INC_70_lower_90=np.percentile(Mc_q_70, 5)
+Mc_q_70_mean_val_1=np.average(Mc_q_70)
+
+Mc_q_INC_80_upper_90=np.percentile(Mc_q_80, 95)
+Mc_q_INC_80_lower_90=np.percentile(Mc_q_80, 5)
+Mc_q_80_mean_val_1=np.average(Mc_q_80)
+
+Mc_q_MPE_1 = (abs(Mc_q_0_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_1 = (abs(Mc_q_INC_0_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_2 = (abs(Mc_q_10_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_2 = (abs(Mc_q_INC_10_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_3 = (abs(Mc_q_20_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_3 = (abs(Mc_q_INC_20_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_4 = (abs(Mc_q_30_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_4 = (abs(Mc_q_INC_30_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_5 = (abs(Mc_q_40_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_5 = (abs(Mc_q_INC_40_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_6 = (abs(Mc_q_50_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_6 = (abs(Mc_q_INC_50_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_7 = (abs(Mc_q_60_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_7 = (abs(Mc_q_INC_60_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_8 = (abs(Mc_q_70_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_8 = (abs(Mc_q_INC_70_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+Mc_q_MPE_9 = (abs(Mc_q_80_mean_val_1 - injected_Mc_q) / injected_Mc_q) * 100
+Mc_q_PE_9 = (abs(Mc_q_INC_80_upper_90 - injected_Mc_q) / injected_Mc_q) * 100
+
+d = [Mc_q_MPE_1,Mc_q_MPE_2,Mc_q_MPE_3,Mc_q_MPE_4,Mc_q_MPE_5,Mc_q_MPE_6,Mc_q_MPE_7,Mc_q_MPE_8,Mc_q_MPE_9]
+de = [Mc_q_PE_1,Mc_q_PE_2,Mc_q_PE_3,Mc_q_PE_4,Mc_q_PE_5,Mc_q_PE_6,Mc_q_PE_7,Mc_q_PE_8,Mc_q_PE_9]
 
 
 fig = plt.figure()
@@ -625,6 +830,17 @@ ax5.set_title('Inclination_scatter_q_40M_q4_s1x=0.75')
 ax5.set_ylabel('Precentage error q (%)', fontsize=12)
 ax5.set_xlabel('Inclination (Degrees)', fontsize=12)
 
+ax6 = fig.add_subplot(326)
+ax6.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'chi_p')
+ax6.plot(Incliations, b, linewidth=2,linestyle='dashed',color='b', label = 'q')
+ax6.plot(Incliations, c, linewidth=2,linestyle='dashed',color='m', label = 'Mc')
+ax6.plot(Incliations, d, linewidth=2,linestyle='dashed',color='lightcoral', label = 'q/Mc')
+ax6.legend(loc='lower right', fontsize=10.5)
+ax6.axis([-10, 90, 0, 50])
+ax6.set_title('Inclination_line_40M_q4_s1x=0.75')
+ax6.set_ylabel('Precentage error (%)', fontsize=12)
+ax6.set_xlabel('Inclination (Degrees)', fontsize=12)
+
 fig.tight_layout()
 fig.set_figheight(15)
 fig.set_figwidth(20)
@@ -635,4 +851,4 @@ fig.set_figwidth(20)
 # Set common labels
 
 
-plt.savefig("Inc_his10.png")
+plt.savefig("Inc_his11.png")
