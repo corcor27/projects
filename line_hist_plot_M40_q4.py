@@ -620,14 +620,14 @@ ax4.legend(loc='upper left', fontsize=10.5)
 ax5 = fig.add_subplot(325)
 ax5.errorbar(x=Incliations, y=b, yerr=be, fmt='o', color='g', label = 'Incliation ranges')
 ax5.legend(loc='lower right', fontsize=10.5)
-ax5.axis([-10, 90, -100, 100])
+ax5.axis([-10, 90, -50, 50])
 ax5.set_title('Inclination_scatter_q_40M_q4_s1x=0.75')
 ax5.set_ylabel('Precentage error q (%)', fontsize=12)
 ax5.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 fig.tight_layout()
-fig.set_figheight(10)
-fig.set_figwidth(15)
+fig.set_figheight(15)
+fig.set_figwidth(20)
 
 
 
