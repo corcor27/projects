@@ -558,4 +558,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Multimass_error1.png")
+plt.savefig("Multimass_error2.png")
