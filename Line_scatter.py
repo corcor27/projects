@@ -243,7 +243,7 @@ ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
 fig.tight_layout()
 fig.set_figheight(5)
 fig.set_figwidth(10)
-
+plt.suptitle('Chi_p Percenatge Error over inclinations')
 
 # Set common labels
 
