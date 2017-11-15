@@ -544,7 +544,7 @@ ax2 = fig.add_subplot(122)
 ax2.plot(Incliations, c, linewidth=2,linestyle='dashed',color='b', label = '40M_q4_inc_40')
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = '60M_q4_inc_40')
 ax2.plot(Incliations, b, linewidth=2,linestyle='dashed',color='r', label = '80M_q4_inc_40')
-ax2.axis([-10, 90, 0, 25])
+ax2.axis([-10, 90, 0, 20])
 ax2.set_title('Inclination_line for Chi_p')
 ax2.set_ylabel('Precentage error (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
@@ -558,4 +558,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Multimass_error2.png")
+plt.savefig("Multimass_error3.png")
