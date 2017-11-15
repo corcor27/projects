@@ -248,4 +248,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("80M_q4_error1.png")
+plt.savefig("80M_q4_error2.png")
