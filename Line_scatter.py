@@ -241,8 +241,8 @@ ax2.set_ylabel('Precentage error (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 fig.tight_layout()
-fig.set_figheight(10)
-fig.set_figwidth(15)
+fig.set_figheight(5)
+fig.set_figwidth(10)
 
 
 # Set common labels
