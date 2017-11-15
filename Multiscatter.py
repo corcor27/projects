@@ -7,6 +7,8 @@ import sys
 print "Initialising..."
 
 injected_value=0.75
+injected_q = 0.75
+injected_Mc 0.75
 Incliations = [0,10,20,30,40,50,60,70,80]
 #manually set injection value
 #two functions for each text.file, allowing the creations for MPE and 90PE parameter
@@ -396,37 +398,37 @@ q_INC_0_upper_90=np.percentile(m1_INC_0, 95)
 q_INC_0_lower_90=np.percentile(m1_INC_0, 5)
 q_0_mean_val_1=np.average(m1_INC_0)
 
-q_INC_10_upper_90=np.percentile(m1_INC_1, 95)
-q_INC_10_lower_90=np.percentile(m1_INC_1, 5)
+q_INC_10_upper_90=np.percentile(m1_INC_10, 95)
+q_INC_10_lower_90=np.percentile(m1_INC_10, 5)
 q_10_mean_val_1=np.average(m1_INC_10)
 
-q_INC_20_upper_90=np.percentile(q_INC_20, 95)
-q_INC_20_lower_90=np.percentile(q_INC_20, 5)
-q_20_mean_val_1=np.average(q_INC_20)
+q_INC_20_upper_90=np.percentile(m1_INC_20, 95)
+q_INC_20_lower_90=np.percentile(m1_INC_20, 5)
+q_20_mean_val_1=np.average(m1_INC_20)
 
-q_INC_30_upper_90=np.percentile(q_INC_30, 95)
-q_INC_30_lower_90=np.percentile(q_INC_30, 5)
-q_30_mean_val_1=np.average(q_INC_30)
+q_INC_30_upper_90=np.percentile(m1_INC_30, 95)
+q_INC_30_lower_90=np.percentile(m1_INC_30, 5)
+q_30_mean_val_1=np.average(m1_INC_30)
 
-q_INC_40_upper_90=np.percentile(q_INC_40, 95)
-q_INC_40_lower_90=np.percentile(q_INC_40, 5)
-q_40_mean_val_1=np.average(q_INC_40)
+q_INC_40_upper_90=np.percentile(m1_INC_40, 95)
+q_INC_40_lower_90=np.percentile(m1_INC_40, 5)
+q_40_mean_val_1=np.average(m1_INC_40)
 
-q_INC_50_upper_90=np.percentile(q_INC_50, 95)
-q_INC_50_lower_90=np.percentile(q_INC_50, 5)
-q_50_mean_val_1=np.average(q_INC_50)
+q_INC_50_upper_90=np.percentile(m1_INC_50, 95)
+q_INC_50_lower_90=np.percentile(m1_INC_50, 5)
+q_50_mean_val_1=np.average(m1_INC_50)
 
-q_INC_60_upper_90=np.percentile(q_INC_60, 95)
-q_INC_60_lower_90=np.percentile(q_INC_60, 5)
-q_60_mean_val_1=np.average(q_INC_60)
+q_INC_60_upper_90=np.percentile(m1_INC_60, 95)
+q_INC_60_lower_90=np.percentile(m1_INC_60, 5)
+q_60_mean_val_1=np.average(m1_INC_60)
 
-q_INC_70_upper_90=np.percentile(q_INC_70, 95)
-q_INC_70_lower_90=np.percentile(q_INC_70, 5)
-q_70_mean_val_1=np.average(q_INC_70)
+q_INC_70_upper_90=np.percentile(m1_INC_70, 95)
+q_INC_70_lower_90=np.percentile(m1_INC_70, 5)
+q_70_mean_val_1=np.average(m1_INC_70)
 
-q_INC_80_upper_90=np.percentile(q_INC_80, 95)
-q_INC_80_lower_90=np.percentile(q_INC_80, 5)
-q_80_mean_val_1=np.average(q_INC_80)
+q_INC_80_upper_90=np.percentile(m1_INC_80, 95)
+q_INC_80_lower_90=np.percentile(m1_INC_80, 5)
+q_80_mean_val_1=np.average(m1_INC_80)
 
 q_MPE_1 = (abs(q_0_mean_val_1 - injected_q) / injected_q) * 100
 q_PE_1 = (abs(q_INC_0_upper_90 - injected_q) / injected_q) * 100
@@ -460,41 +462,41 @@ be = [q_PE_1,q_PE_2,q_PE_3,q_PE_4,q_PE_5,q_PE_6,q_PE_7,q_PE_8,q_PE_9]
 
 #create Mc 
 
-Mc_INC_0_upper_90=np.percentile(Mc_0, 95)
-Mc_INC_0_lower_90=np.percentile(Mc_0, 5)
-Mc_0_mean_val_1=np.average(Mc_0)
+Mc_INC_0_upper_90=np.percentile(m2_INC_0, 95)
+Mc_INC_0_lower_90=np.percentile(m2_INC_0, 5)
+Mc_0_mean_val_1=np.average(m2_INC_0)
 
-Mc_INC_10_upper_90=np.percentile(Mc_10, 95)
-MC_INC_10_lower_90=np.percentile(Mc_10, 5)
-Mc_10_mean_val_1=np.average(Mc_10)
+Mc_INC_10_upper_90=np.percentile(m2_INC_10, 95)
+MC_INC_10_lower_90=np.percentile(m2_INC_10, 5)
+Mc_10_mean_val_1=np.average(m2_INC_10)
 
-Mc_INC_20_upper_90=np.percentile(Mc_20, 95)
-Mc_INC_20_lower_90=np.percentile(Mc_20, 5)
-Mc_20_mean_val_1=np.average(Mc_20)
+Mc_INC_20_upper_90=np.percentile(m2_INC_20, 95)
+Mc_INC_20_lower_90=np.percentile(m2_INC_20, 5)
+Mc_20_mean_val_1=np.average(m2_INC_20)
 
-Mc_INC_30_upper_90=np.percentile(Mc_30, 95)
-Mc_INC_30_lower_90=np.percentile(Mc_30, 5)
-Mc_30_mean_val_1=np.average(Mc_30)
+Mc_INC_30_upper_90=np.percentile(m2_INC_30, 95)
+Mc_INC_30_lower_90=np.percentile(m2_INC_30, 5)
+Mc_30_mean_val_1=np.average(m2_INC_30)
 
-Mc_INC_40_upper_90=np.percentile(Mc_40, 95)
-Mc_INC_40_lower_90=np.percentile(Mc_40, 5)
-Mc_40_mean_val_1=np.average(Mc_40)
+Mc_INC_40_upper_90=np.percentile(m2_INC_40, 95)
+Mc_INC_40_lower_90=np.percentile(m2_INC_40, 5)
+Mc_40_mean_val_1=np.average(m2_INC_40)
 
-Mc_INC_50_upper_90=np.percentile(Mc_50, 95)
-Mc_INC_50_lower_90=np.percentile(Mc_50, 5)
-Mc_50_mean_val_1=np.average(Mc_50)
+Mc_INC_50_upper_90=np.percentile(m2_INC_50, 95)
+Mc_INC_50_lower_90=np.percentile(m2_INC_50, 5)
+Mc_50_mean_val_1=np.average(m2_INC_50)
 
-Mc_INC_60_upper_90=np.percentile(Mc_60, 95)
-Mc_INC_60_lower_90=np.percentile(Mc_60, 5)
-Mc_60_mean_val_1=np.average(Mc_60)
+Mc_INC_60_upper_90=np.percentile(m2_INC_60, 95)
+Mc_INC_60_lower_90=np.percentile(m2_INC_60, 5)
+Mc_60_mean_val_1=np.average(m2_INC_60)
 
-Mc_INC_70_upper_90=np.percentile(Mc_70, 95)
-Mc_INC_70_lower_90=np.percentile(Mc_70, 5)
-Mc_70_mean_val_1=np.average(Mc_70)
+Mc_INC_70_upper_90=np.percentile(m2_INC_70, 95)
+Mc_INC_70_lower_90=np.percentile(m2_INC_70, 5)
+Mc_70_mean_val_1=np.average(m2_INC_70)
 
-Mc_INC_80_upper_90=np.percentile(Mc_80, 95)
-Mc_INC_80_lower_90=np.percentile(Mc_80, 5)
-Mc_80_mean_val_1=np.average(Mc_80)
+Mc_INC_80_upper_90=np.percentile(m2_INC_80, 95)
+Mc_INC_80_lower_90=np.percentile(m2_INC_80, 5)
+Mc_80_mean_val_1=np.average(m2_INC_80)
 
 Mc_MPE_1 = (abs(Mc_0_mean_val_1 - injected_Mc) / injected_Mc) * 100
 Mc_PE_1 = (abs(Mc_INC_0_upper_90 - injected_Mc) / injected_Mc) * 100
@@ -529,18 +531,24 @@ ce = [Mc_PE_1,Mc_PE_2,Mc_PE_3,Mc_PE_4,Mc_PE_5,Mc_PE_6,Mc_PE_7,Mc_PE_8,Mc_PE_9]
 fig = plt.figure()
 
 ax1 = fig.add_subplot(121)
-ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
+ax1.errorbar(x=Incliations, y=c, yerr=ce, fmt='o', color='b', label = '40M_q4_inc_40')
+ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = '60M_q4_inc_40')
+ax1.errorbar(x=Incliations, y=b, yerr=be, fmt='o', color='r', label = '80M_q4_inc_40')
 ax1.axis([-10, 90, -35, 35])
 ax1.set_title('Inclination_scatter for Chi_p')
 ax1.set_ylabel('Precentage error (%)', fontsize=12)
 ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
+ax1.legend(loc='upper right', fontsize=10.5)
 
 ax2 = fig.add_subplot(122)
-ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
+ax2.plot(Incliations, c, linewidth=2,linestyle='dashed',color='b', label = '40M_q4_inc_40')
+ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = '60M_q4_inc_40')
+ax2.plot(Incliations, b, linewidth=2,linestyle='dashed',color='r', label = '80M_q4_inc_40')
 ax2.axis([-10, 90, 0, 25])
 ax2.set_title('Inclination_line for Chi_p')
 ax2.set_ylabel('Precentage error (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
+ax2.legend(loc='upper right', fontsize=10.5)
 
 fig.tight_layout()
 fig.set_figheight(5)
@@ -550,4 +558,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("60M_q4_error5.png")
+plt.savefig("Multimass_error1.png")
