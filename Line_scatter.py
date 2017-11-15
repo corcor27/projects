@@ -228,7 +228,7 @@ fig = plt.figure()
 
 ax1 = fig.add_subplot(121)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
-ax1.axis([-10, 90, -50, 50])
+ax1.axis([-10, 90, -35, 35])
 ax1.set_title('Inclination_scatter')
 ax1.set_ylabel('Precentage error (%)', fontsize=12)
 ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
@@ -248,4 +248,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("60M_q4_error1.png")
+plt.savefig("60M_q4_error2.png")
