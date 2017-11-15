@@ -248,4 +248,4 @@ plt.suptitle('Chi_p Percenatge Error over inclinations')
 # Set common labels
 
 
-plt.savefig("60M_q4_error2.png")
+plt.savefig("60M_q4_error3.png")
