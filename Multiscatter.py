@@ -531,9 +531,9 @@ ce = [Mc_PE_1,Mc_PE_2,Mc_PE_3,Mc_PE_4,Mc_PE_5,Mc_PE_6,Mc_PE_7,Mc_PE_8,Mc_PE_9]
 fig = plt.figure()
 
 ax1 = fig.add_subplot(121)
-ax1.errorbar(x=Incliations, y=c, yerr=ce, fmt='o', color='b', label = '40M_q4_inc_40')
-ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = '60M_q4_inc_40')
-ax1.errorbar(x=Incliations, y=b, yerr=be, fmt='o', color='r', label = '80M_q4_inc_40')
+ax1.errorbar(x=Incliations, y=c, yerr=ce, fmt='o', color='b', label = '40M_q4')
+ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = '60M_q4')
+ax1.errorbar(x=Incliations, y=b, yerr=be, fmt='o', color='r', label = '80M_q4')
 ax1.axis([-10, 90, -35, 50])
 ax1.set_title('Inclination_scatter for Chi_p')
 ax1.set_ylabel('Precentage error (%)', fontsize=12)
@@ -541,9 +541,9 @@ ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
 ax1.legend(loc='upper right', fontsize=10.5)
 
 ax2 = fig.add_subplot(122)
-ax2.plot(Incliations, c, linewidth=2,linestyle='dashed',color='b', label = '40M_q4_inc_40')
-ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = '60M_q4_inc_40')
-ax2.plot(Incliations, b, linewidth=2,linestyle='dashed',color='r', label = '80M_q4_inc_40')
+ax2.plot(Incliations, c, linewidth=2,linestyle='dashed',color='b', label = '40M_q4')
+ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = '60M_q4')
+ax2.plot(Incliations, b, linewidth=2,linestyle='dashed',color='r', label = '80M_q4')
 ax2.axis([-10, 90, 0, 20])
 ax2.set_title('Inclination_line for Chi_p')
 ax2.set_ylabel('Precentage error (%)', fontsize=12)
@@ -558,4 +558,4 @@ fig.set_figwidth(10)
 # Set common labels
 
 
-plt.savefig("Multimass_error3.png")
+plt.savefig("Multimass_error4.png")
