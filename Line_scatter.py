@@ -229,23 +229,23 @@ fig = plt.figure()
 ax1 = fig.add_subplot(121)
 ax1.errorbar(x=Incliations, y=a, yerr=ae, fmt='o', color='g', label = 'Incliation ranges')
 ax1.axis([-10, 90, -35, 35])
-ax1.set_title('Inclination_scatter')
+ax1.set_title('Inclination_scatter for Chi_p')
 ax1.set_ylabel('Precentage error (%)', fontsize=12)
 ax1.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 ax2 = fig.add_subplot(122)
 ax2.plot(Incliations, a, linewidth=2,linestyle='dashed',color='g', label = 'Incliation ranges')
 ax2.axis([-10, 90, 0, 25])
-ax2.set_title('Inclination_line')
+ax2.set_title('Inclination_line for Chi_p')
 ax2.set_ylabel('Precentage error (%)', fontsize=12)
 ax2.set_xlabel('Inclination (Degrees)', fontsize=12)
 
 fig.tight_layout()
 fig.set_figheight(5)
 fig.set_figwidth(10)
-plt.suptitle('Chi_p Percenatge Error over inclinations')
+
 
 # Set common labels
 
 
-plt.savefig("60M_q4_error3.png")
+plt.savefig("60M_q4_error4.png")
